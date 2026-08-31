@@ -1,0 +1,39 @@
+Data:
+  Table-Name: job_data
+  Cache-Duration: 3600
+  Save-Interval: 5
+Job:
+  Amount-Limit:
+    # Available values: RANK, PERMISSION
+    # ==================== RANK MODE ====================
+    # Get value by player's permission group. All keys in 'Values' list will represent permission group names.
+    # If player has none of specified groups, the 'Default_Value' setting will be used then
+    #   Values:
+    #     vip: 1 # -> Player must be in 'vip' permission group.
+    #     gold: 2 # -> Player must be in 'gold' permission group.
+    #     emerald: 3 # -> Player must be in 'emerald' permission group.
+    #
+    # ==================== PERMISSION MODE ====================
+    # Get value by player's permissions. All keys in 'Values' list will represent postfixes for the 'Permission_Prefix' setting (see below).
+    # If player has none of specified permissions, the 'Default_Value' setting will be used then
+    #   Permission_Prefix: 'example.prefix.'
+    #   Values:
+    #     vip: 1 # -> Player must have 'example.prefix.vip' permission.
+    #     gold: 2 # -> Player must have 'example.prefix.gold' permission.
+    #     emerald: 3 # -> Player must have 'example.prefix.emerald' permission.
+    Mode: RANK
+    # Sets permission prefix for the 'PERMISSION' mode.
+    Permission_Prefix: jobs.amount.
+    Default_Value: 3.0
+    Values:
+      pro: 4.0
+      elite: 5.0
+  Leave-Cooldown:
+    # Controls whether players required to work for certain time in job before they can leave.
+    Enabled: true
+    # Sets cooldown value.
+    Value: 3600
+  # Sets amount of pages for the Jobs GUI.
+  Menu-Pages: 1
+  # Controls how often (in seconds) employees counts are updated.
+  Employee-Count-Update-Interval: 900

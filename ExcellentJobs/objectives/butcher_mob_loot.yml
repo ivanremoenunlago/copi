@@ -1,0 +1,11 @@
+Type: mob_loot
+Sources:
+  minecraft:beef: 'JobXP 1.6~2.4000000000000004 ; Income 0.16~0.24 ; ContractPoints 0.04~0.06 ; Probability 100.0~100.0 ; '
+  minecraft:porkchop: 'JobXP 1.6~2.4000000000000004 ; Income 0.16~0.24 ; ContractPoints 0.04~0.06 ; Probability 100.0~100.0 ; '
+  minecraft:mutton: 'JobXP 1.6~2.4000000000000004 ; Income 0.16~0.24 ; ContractPoints 0.04~0.06 ; Probability 100.0~100.0 ; '
+  minecraft:chicken: 'JobXP 1.2000000000000002~1.8 ; Income 0.12~0.18 ; ContractPoints 0.03~0.05 ; Probability 100.0~100.0 ; '
+  minecraft:rabbit: 'JobXP 2.0~3.0 ; Income 0.2~0.3 ; ContractPoints 0.05~0.07 ; Probability 100.0~100.0 ; '
+  minecraft:leather: 'JobXP 2.4000000000000004~3.6 ; Income 0.24~0.36 ; ContractPoints 0.06~0.09 ; Probability 100.0~100.0 ; '
+  minecraft:feather: 'JobXP 0.8~1.2000000000000002 ; Income 0.08~0.12 ; ContractPoints 0.02~0.03 ; Probability 100.0~100.0 ; '
+  minecraft:rabbit_hide: 'JobXP 2.4000000000000004~3.6 ; Income 0.24~0.36 ; ContractPoints 0.06~0.09 ; Probability 100.0~100.0 ; '
+  minecraft:rabbit_foot: 'JobXP 8.0~12.0 ; Income 0.8~1.2 ; ContractPoints 0.16~0.24 ; Probability 100.0~100.0 ; '

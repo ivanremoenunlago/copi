@@ -1,0 +1,32 @@
+Definition:
+  Name: <white><sprite:"items":"item/iron_hoe"></white> <gradient:#96bf48:#5e8e3e><b>FARMER</b></gradient>
+  Description:
+  - <gray>Plant, grow, and harvests</gray>
+  - <gray>all kinds of crops and plant.</gray>
+  - <gray></gray>
+  - <gray>Turn your hard work in the</gray>
+  - <gray>dirt into easy cash.</gray>
+  Icon:
+    Material: minecraft:iron_hoe
+    Lore: []
+  Menu-Slots: '14'
+  Menu-Page: 1
+Behavior:
+  Permission-Required: false
+  Join-Commands: []
+  Leave-Commands: []
+Grind:
+  Bar-Color: GREEN
+  Objective-Ids:
+  - farmer_break_block
+  - farmer_craft
+  - farmer_smith
+Leveling:
+  Max-Level: 100
+  Reward-Pool-Ids:
+  - basic
+  Max_Level: 100
+Contract:
+  Required: true
+  Allowed-Ids:
+  - '*'

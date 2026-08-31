@@ -1,0 +1,5 @@
+Type: shearing
+Sources:
+  minecraft:sheep: 'JobXP 2.4000000000000004~3.6 ; Income 0.4~0.6 ; ContractPoints 0.08~0.12 ; Probability 100.0~100.0 ; '
+  minecraft:mooshroom: 'JobXP 8.0~12.0 ; Income 1.6~2.4 ; ContractPoints 0.32~0.48 ; Probability 100.0~100.0 ; '
+  minecraft:snow_golem: 'JobXP 1.6~2.4000000000000004 ; Income 0.24~0.36 ; ContractPoints 0.04~0.06 ; Probability 100.0~100.0 ; '

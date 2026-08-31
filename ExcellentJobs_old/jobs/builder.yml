@@ -1,0 +1,725 @@
+# Sets display name for the job.
+# https://nightexpressdev.com/nightcore/configuration/text-formation/
+Name: '[lang].jobs.name.builder[/lang] [lang].rank.clasp.d[/lang]'
+# Set description for the job.
+# https://nightexpressdev.com/nightcore/configuration/text-formation/
+Description:
+- '[lang].jobs.lore.builder.1[/lang]'
+- '[lang].jobs.lore.builder.2[/lang]'
+# Set icon for the job.
+# https://nightexpressdev.com/nightcore/configuration/item-formation/
+Icon:
+  Material: minecraft:beacon
+  Lore: []
+# When enabled, players must have 'excellentjobs.job.builder' permission in order to use this job.
+Permission_Required: true
+ProgressBar:
+  # Sets color for this job progress bar.
+  # Allowed values: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+  Color: GREEN
+# Assigns the job with specified state for new players joined for the first time.
+# https://nightexpressdev.com/excellentjobs/jobs/auto-join
+# [Allowed values: PRIMARY, SECONDARY, INACTIVE]
+# [Default is INACTIVE]
+Initial_State: PRIMARY
+# The job will have no effect in listed worlds (no XP and Income).
+# https://nightexpressdev.com/excellentjobs/jobs/disabled-worlds
+Disabled_Worlds: []
+General:
+  # https://nightexpressdev.com/excellentjobs/jobs/leave-join-commands
+  JoinCommands: []
+  # https://nightexpressdev.com/excellentjobs/jobs/leave-join-commands
+  LeaveCommands: []
+Leveling:
+  # Defines max. possible job level if picked as Primary job.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  Max_Level: 100
+  # Defines initial value for the geometric XP progression.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  XP_Initial: 300
+  # Defines step value for the geometric XP progression.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  XP_Factor: 1.0584421
+  # Leveling rewards.
+  # https://nightexpressdev.com/excellentjobs/jobs/level-rewards
+  Rewards:
+    List:
+      lvl_25:
+        Levels: '25'
+        Repeatable: false
+        Name: '[lang].jobs.builder_d.rewards.25[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack builder_d builder_d_25
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_50:
+        Levels: '50'
+        Repeatable: false
+        Name: '[lang].jobs.builder_d.rewards.50[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack builder_d builder_d_50
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_75:
+        Levels: '75'
+        Repeatable: false
+        Name: '[lang].jobs.builder_d.rewards.75[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack builder_d builder_d_75
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_100:
+        Levels: '100'
+        Repeatable: false
+        Name: '[lang].jobs.builder_d.rewards.100[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack builder_d builder_d_100
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+    Modifiers:
+      money:
+        Base: 0.0
+        Per_Level: 1000.0
+        Step: 1.0
+        Action: ADD
+
+
+Daily_Limits:
+  # Defines daily Income limits on per currency basis.
+  # You can use the 'default' keyword for all currencies that are not listed here.
+  # https://nightexpressdev.com/excellentjobs/jobs/daily-limits
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  Currency:
+    vault:
+      Base: -1.0
+      Per_Level: 0.0
+      Step: 0.0
+      Action: ADD
+  # Defines daily XP limit.
+  # https://nightexpressdev.com/excellentjobs/jobs/daily-limits
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  XP:
+    Base: -1.0
+    Per_Level: 0.0
+    Step: 0.0
+    Action: ADD
+Bonus:
+  # Sets XP bonus based on player's job state and level.
+  # https://nightexpressdev.com/excellentjobs/jobs/xp-income-bonus
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  XP:
+    Primary:
+      Base: 0.0
+      Per_Level: 0.0
+      Step: 5.0
+      Action: ADD
+    Secondary:
+      Base: 0.0
+      Per_Level: 0.0
+      Step: 1.0
+      Action: ADD
+  # Sets Income bonus based on player's job state and level.
+  # https://nightexpressdev.com/excellentjobs/jobs/xp-income-bonus
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  Income:
+    Primary:
+      Base: 0.0
+      Per_Level: 0.09
+      Step: 1.0
+      Action: ADD
+    Secondary:
+      Base: -0.5
+      Per_Level: 0.09
+      Step: 1.0
+      Action: ADD
+Objectives:
+  building_blocks_cheap:
+    Currency: vault
+    Type: building
+    SourceTable:
+      Blocks:
+        minecraft:white_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:orange_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:magenta_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:light_blue_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:yellow_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:lime_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:pink_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:gray_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:light_gray_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:cyan_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:purple_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:blue_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:brown_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:green_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:red_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:black_carpet: 0.25;0.75 0.03;0.03 100.0
+        minecraft:rail: 0.25;0.75 0.03;0.03 100.0
+        minecraft:powered_rail: 0.25;0.75 0.03;0.03 100.0
+        minecraft:detector_rail: 0.25;0.75 0.03;0.03 100.0
+        minecraft:activator_rail: 0.25;0.75 0.03;0.03 100.0
+        minecraft:oak_leaves: 0.375;1.125 0.045;0.045 100.0
+        minecraft:spruce_leaves: 0.375;1.125 0.045;0.045 100.0
+        minecraft:birch_leaves: 0.375;1.125 0.045;0.045 100.0
+        minecraft:jungle_leaves: 0.375;1.125 0.045;0.045 100.0
+        minecraft:acacia_leaves: 0.375;1.125 0.045;0.045 100.0
+        minecraft:dark_oak_leaves: 0.375;1.125 0.045;0.045 100.0
+        minecraft:mangrove_leaves: 0.375;1.125 0.045;0.045 100.0
+        minecraft:cherry_leaves: 0.375;1.125 0.045;0.045 100.0
+        minecraft:azalea_leaves: 0.375;1.125 0.045;0.045 100.0
+        minecraft:flowering_azalea_leaves: 0.375;1.125 0.045;0.045 100.0
+  
+  building_blocks_medium:
+    Currency: vault
+    Type: building
+    SourceTable:
+      Blocks:
+        minecraft:white_wool: 0.500;1.500 0.060;0.180 100.0
+        minecraft:black_wool: 0.500;1.500 0.060;0.180 100.0
+        minecraft:orange_wool: 0.500;1.500 0.060;0.180 100.0
+        minecraft:smooth_stone: 0.500;1.500 0.060;0.180 100.0
+        minecraft:sandstone: 0.500;1.500 0.060;0.180 100.0
+        minecraft:cut_sandstone: 0.500;1.500 0.060;0.180 100.0
+        minecraft:mossy_cobblestone: 0.500;1.500 0.060;0.180 100.0
+        minecraft:bricks: 0.500;1.500 0.060;0.180 100.0
+        minecraft:prismarine: 0.500;1.500 0.060;0.180 100.0
+        minecraft:prismarine_bricks: 0.500;1.500 0.060;0.180 100.0
+        minecraft:observer: 0.500;1.500 0.060;0.180 100.0
+        minecraft:coal_block: 0.500;1.500 0.060;0.180 100.0
+        minecraft:soul_sand: 0.500;1.500 0.060;0.180 100.0
+        minecraft:cobblestone: 0.500;1.500 0.060;0.180 100.0
+        minecraft:stone_bricks: 0.500;1.500 0.060;0.180 100.0
+        minecraft:nether_bricks: 0.500;1.500 0.060;0.180 100.0
+        minecraft:granite: 0.500;1.500 0.060;0.180 100.0
+        minecraft:bookshelf: 0.500;1.500 0.060;0.180 100.0
+        minecraft:clay: 0.500;1.500 0.060;0.180 100.0
+        minecraft:composter: 0.500;1.500 0.060;0.180 100.0
+        minecraft:ladder: 0.500;1.500 0.060;0.180 100.0
+        minecraft:smooth_sandstone: 0.500;1.500 0.060;0.180 100.0
+        minecraft:cut_red_sandstone: 0.500;1.500 0.060;0.180 100.0
+        minecraft:red_sandstone: 0.500;1.500 0.060;0.180 100.0
+        minecraft:chiseled_sandstone: 0.500;1.500 0.060;0.180 100.0
+        minecraft:deepslate: 0.500;1.500 0.060;0.180 100.0
+        minecraft:sculk: 0.500;1.500 0.060;0.180 100.0
+        minecraft:cherry_leaves: 0.500;1.500 0.060;0.180 100.0
+        minecraft:cherry_log: 0.500;1.500 0.060;0.180 100.0
+        minecraft:mangrove_log: 0.500;1.500 0.060;0.180 100.0
+        minecraft:warped_stem: 0.500;1.500 0.060;0.180 100.0
+        minecraft:crimson_stem: 0.500;1.500 0.060;0.180 100.0
+        minecraft:oak_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:spruce_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:birch_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:jungle_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:acacia_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:dark_oak_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:mangrove_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:cherry_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:bamboo_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:bamboo_mosaic_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:crimson_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:warped_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:stone_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:cobblestone_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:mossy_cobblestone_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:smooth_stone_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:stone_brick_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:mossy_stone_brick_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:granite_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:polished_granite_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:diorite_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:polished_diorite_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:andesite_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:polished_andesite_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:cobbled_deepslate_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:polished_deepslate_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:deepslate_brick_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:deepslate_tile_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:brick_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:mud_brick_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:sandstone_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:smooth_sandstone_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:cut_sandstone_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:red_sandstone_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:smooth_red_sandstone_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:cut_red_sandstone_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:prismarine_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:prismarine_brick_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:dark_prismarine_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:nether_brick_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:red_nether_brick_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:blackstone_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:polished_blackstone_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:polished_blackstone_brick_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:end_stone_brick_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:purpur_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:quartz_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:smooth_quartz_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:cut_copper_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:exposed_cut_copper_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:weathered_cut_copper_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:oxidized_cut_copper_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:waxed_cut_copper_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:waxed_exposed_cut_copper_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:waxed_weathered_cut_copper_slab: 0.5;1.5 0.06;0.06 100.0
+        minecraft:waxed_oxidized_cut_copper_slab: 0.500;1.500 0.060;0.180 100.0
+        minecraft:oak_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:spruce_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:birch_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:jungle_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:acacia_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:dark_oak_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:mangrove_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:cherry_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:bamboo_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:bamboo_mosaic_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:crimson_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:warped_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:stone_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:cobblestone_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:mossy_cobblestone_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:stone_brick_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:mossy_stone_brick_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:granite_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:polished_granite_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:diorite_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:polished_diorite_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:andesite_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:polished_andesite_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:cobbled_deepslate_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:polished_deepslate_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:deepslate_brick_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:deepslate_tile_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:brick_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:mud_brick_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:sandstone_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:smooth_sandstone_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:red_sandstone_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:smooth_red_sandstone_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:prismarine_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:prismarine_brick_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:dark_prismarine_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:nether_brick_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:red_nether_brick_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:blackstone_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:polished_blackstone_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:polished_blackstone_brick_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:cut_copper_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:exposed_cut_copper_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:weathered_cut_copper_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:oxidized_cut_copper_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:waxed_cut_copper_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:waxed_exposed_cut_copper_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:waxed_weathered_cut_copper_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:waxed_oxidized_cut_copper_stairs: 0.500;1.500 0.060;0.180 100.0
+        minecraft:oak_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:spruce_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:birch_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:jungle_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:acacia_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:dark_oak_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:mangrove_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:cherry_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:bamboo_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:crimson_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:warped_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:oak_hanging_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:spruce_hanging_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:birch_hanging_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:jungle_hanging_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:acacia_hanging_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:dark_oak_hanging_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:mangrove_hanging_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:cherry_hanging_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:bamboo_hanging_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:crimson_hanging_sign: 0.500;1.500 0.060;0.180 100.0
+        minecraft:warped_hanging_sign: 0.500;1.500 0.060;0.180 100.0
+  
+  building_blocks_expensive:
+    Currency: vault
+    Type: building
+    SourceTable:
+      Blocks:
+        minecraft:terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:blue_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:cyan_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:purple_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:pink_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:red_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:light_gray_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:magenta_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:brown_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:gray_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:orange_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:white_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:light_blue_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:black_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:yellow_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:packed_ice: 1.000;3.000 0.120;0.360 100.0
+        minecraft:ice: 1.000;3.000 0.120;0.360 100.0
+        minecraft:blue_ice: 1.000;3.000 0.120;0.360 100.0
+        minecraft:redstone_lamp: 1.000;3.000 0.120;0.360 100.0
+        minecraft:nether_wart_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:raw_gold_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:black_glazed_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:pink_glazed_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:brown_glazed_terracotta: 1.000;3.000 0.120;0.360 100.0
+        minecraft:resin_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:smooth_red_sandstone: 1.000;3.000 0.120;0.360 100.0
+        minecraft:pointed_dripstone: 1.000;3.000 0.120;0.360 100.0
+        minecraft:white_bed: 1.000;3.000 0.120;0.360 100.0
+        minecraft:bell: 1.000;3.000 0.120;0.360 100.0
+        minecraft:chest: 1.000;3.000 0.120;0.360 100.0
+        minecraft:shulker_box: 1.000;3.000 0.120;0.360 100.0
+        minecraft:melon: 1.000;3.000 0.120;0.360 100.0
+        minecraft:spore_blossom: 1.000;3.000 0.120;0.360 100.0
+        minecraft:big_dripleaf: 1.000;3.000 0.120;0.360 100.0
+        minecraft:flowering_azalea: 1.000;3.000 0.120;0.360 100.0
+        minecraft:azalea: 1.000;3.000 0.120;0.360 100.0
+        minecraft:sculk_shrieker: 1.000;3.000 0.120;0.360 100.0
+        minecraft:fire_coral_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:bubble_coral_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:brain_coral_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:tube_coral_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:horn_coral_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:dead_fire_coral_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:dead_bubble_coral_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:dead_brain_coral_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:dead_tube_coral_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:dead_horn_coral_block: 1.000;3.000 0.120;0.360 100.0
+        minecraft:piston: 1.000;3.000 0.120;0.360 100.0
+        minecraft:sticky_piston: 1.000;3.000 0.120;0.360 100.0
+        minecraft:dispenser: 1.000;3.000 0.120;0.360 100.0
+        minecraft:dropper: 1.000;3.000 0.120;0.360 100.0
+        minecraft:packed_mud: 1.000;3.000 0.120;0.360 100.0
+        minecraft:beehive: 1.000;3.000 0.120;0.360 100.0
+        minecraft:oak_fence: 1.000;3.000 0.120;0.360 100.0
+        minecraft:spruce_fence: 1.000;3.000 0.120;0.360 100.0
+        minecraft:birch_fence: 1.000;3.000 0.120;0.360 100.0
+        minecraft:jungle_fence: 1.000;3.000 0.120;0.360 100.0
+        minecraft:acacia_fence: 1.000;3.000 0.120;0.360 100.0
+        minecraft:dark_oak_fence: 1.000;3.000 0.120;0.360 100.0
+        minecraft:mangrove_fence: 1.000;3.000 0.120;0.360 100.0
+        minecraft:cherry_fence: 1.000;3.000 0.120;0.360 100.0
+        minecraft:bamboo_fence: 1.000;3.000 0.120;0.360 100.0
+        minecraft:crimson_fence: 1.000;3.000 0.120;0.360 100.0
+        minecraft:warped_fence: 1.000;3.000 0.120;0.360 100.0
+        minecraft:oak_fence_gate: 1.000;3.000 0.120;0.360 100.0
+        minecraft:spruce_fence_gate: 1.000;3.000 0.120;0.360 100.0
+        minecraft:birch_fence_gate: 1.000;3.000 0.120;0.360 100.0
+        minecraft:jungle_fence_gate: 1.000;3.000 0.120;0.360 100.0
+        minecraft:acacia_fence_gate: 1.000;3.000 0.120;0.360 100.0
+        minecraft:dark_oak_fence_gate: 1.000;3.000 0.120;0.360 100.0
+        minecraft:mangrove_fence_gate: 1.000;3.000 0.120;0.360 100.0
+        minecraft:cherry_fence_gate: 1.000;3.000 0.120;0.360 100.0
+        minecraft:bamboo_fence_gate: 1.000;3.000 0.120;0.360 100.0
+        minecraft:crimson_fence_gate: 1.000;3.000 0.120;0.360 100.0
+        minecraft:warped_fence_gate: 1.000;3.000 0.120;0.360 100.0
+        minecraft:cobblestone_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:mossy_cobblestone_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:stone_brick_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:mossy_stone_brick_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:granite_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:diorite_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:andesite_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:cobbled_deepslate_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:polished_deepslate_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:deepslate_brick_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:deepslate_tile_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:brick_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:mud_brick_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:sandstone_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:red_sandstone_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:prismarine_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:nether_brick_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:red_nether_brick_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:blackstone_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:polished_blackstone_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:polished_blackstone_brick_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:end_stone_brick_wall: 1.000;3.000 0.120;0.360 100.0
+        minecraft:chain: 1.000;3.000 0.120;0.360 100.0
+        minecraft:lantern: 1.000;3.000 0.120;0.360 100.0
+        minecraft:soul_lantern: 1.000;3.000 0.120;0.360 100.0
+        minecraft:daylight_detector: 1.000;3.000 0.120;0.360 100.0
+        minecraft:iron_bars: 1.000;3.000 0.120;0.360 100.0
+        minecraft:glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:white_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:orange_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:magenta_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:light_blue_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:yellow_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:lime_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:pink_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:gray_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:light_gray_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:cyan_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:purple_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:blue_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:brown_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:green_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:red_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:black_stained_glass_pane: 1.000;3.000 0.120;0.360 100.0
+        minecraft:cracked_nether_bricks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:chiseled_nether_bricks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:red_nether_bricks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:netherrack: 1.125;3.375 0.135;0.405 100.0
+        minecraft:basalt: 1.125;3.375 0.135;0.405 100.0
+        minecraft:polished_basalt: 1.125;3.375 0.135;0.405 100.0
+        minecraft:smooth_basalt: 1.125;3.375 0.135;0.405 100.0
+        minecraft:blackstone: 1.125;3.375 0.135;0.405 100.0
+        minecraft:polished_blackstone: 1.125;3.375 0.135;0.405 100.0
+        minecraft:chiseled_polished_blackstone: 1.125;3.375 0.135;0.405 100.0
+        minecraft:polished_blackstone_bricks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:cracked_polished_blackstone_bricks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:end_stone: 1.125;3.375 0.135;0.405 100.0
+        minecraft:end_stone_bricks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:purpur_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:purpur_pillar: 1.125;3.375 0.135;0.405 100.0
+        minecraft:quartz_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:chiseled_quartz_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:quartz_bricks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:quartz_pillar: 1.125;3.375 0.135;0.405 100.0
+        minecraft:smooth_quartz: 1.125;3.375 0.135;0.405 100.0
+        minecraft:amethyst_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:block_of_iron: 1.125;3.375 0.135;0.405 100.0
+        minecraft:block_of_gold: 1.125;3.375 0.135;0.405 100.0
+        minecraft:block_of_diamond: 1.125;3.375 0.135;0.405 100.0
+        minecraft:block_of_emerald: 1.125;3.375 0.135;0.405 100.0
+        minecraft:block_of_redstone: 1.125;3.375 0.135;0.405 100.0
+        minecraft:block_of_lapis: 1.125;3.375 0.135;0.405 100.0
+        minecraft:block_of_coal: 1.125;3.375 0.135;0.405 100.0
+        minecraft:block_of_netherite: 1.125;3.375 0.135;0.405 100.0
+        minecraft:block_of_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:exposed_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:weathered_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:oxidized_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:waxed_copper_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:waxed_exposed_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:waxed_weathered_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:waxed_oxidized_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:cut_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:exposed_cut_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:weathered_cut_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:oxidized_cut_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:waxed_cut_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:waxed_exposed_cut_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:waxed_weathered_cut_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:waxed_oxidized_cut_copper: 1.125;3.375 0.135;0.405 100.0
+        minecraft:honey_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:honeycomb_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:slime_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:target: 1.125;3.375 0.135;0.405 100.0
+        minecraft:note_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:jukebox: 1.125;3.375 0.135;0.405 100.0
+        minecraft:tuff: 1.125;3.375 0.135;0.405 100.0
+        minecraft:polished_tuff: 1.125;3.375 0.135;0.405 100.0
+        minecraft:tuff_bricks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:chiseled_tuff_bricks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:copper_bulb: 1.125;3.375 0.135;0.405 100.0
+        minecraft:calcite: 1.125;3.375 0.135;0.405 100.0
+        minecraft:dripstone_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:sea_lantern: 1.125;3.375 0.135;0.405 100.0
+        minecraft:glowstone: 1.125;3.375 0.135;0.405 100.0
+        minecraft:shroomlight: 1.125;3.375 0.135;0.405 100.0
+        minecraft:ochre_froglight: 1.125;3.375 0.135;0.405 100.0
+        minecraft:pearlescent_froglight: 1.125;3.375 0.135;0.405 100.0
+        minecraft:verdant_froglight: 1.125;3.375 0.135;0.405 100.0
+        minecraft:bone_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:lapis_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:white_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:orange_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:magenta_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:light_blue_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:yellow_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:lime_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:pink_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:gray_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:light_gray_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:cyan_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:purple_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:blue_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:brown_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:green_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:red_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:black_concrete: 1.125;3.375 0.135;0.405 100.0
+        minecraft:white_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:orange_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:magenta_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:light_blue_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:yellow_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:lime_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:pink_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:gray_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:light_gray_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:cyan_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:purple_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:blue_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:brown_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:green_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:red_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:black_concrete_powder: 1.125;3.375 0.135;0.405 100.0
+        minecraft:gravel: 1.125;3.375 0.135;0.405 100.0
+        minecraft:dirt: 1.125;3.375 0.135;0.405 100.0
+        minecraft:coarse_dirt: 1.125;3.375 0.135;0.405 100.0
+        minecraft:grass_block: 1.125;3.375 0.135;0.405 100.0
+        minecraft:podzol: 1.125;3.375 0.135;0.405 100.0
+        minecraft:mycelium: 1.125;3.375 0.135;0.405 100.0
+        minecraft:sand: 1.125;3.375 0.135;0.405 100.0
+        minecraft:red_sand: 1.125;3.375 0.135;0.405 100.0
+        minecraft:coal_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:iron_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:copper_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:gold_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:diamond_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:emerald_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:redstone_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:lapis_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:nether_gold_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:nether_quartz_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:ancient_debris: 1.125;3.375 0.135;0.405 100.0
+        minecraft:deepslate_coal_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:deepslate_iron_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:deepslate_copper_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:deepslate_gold_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:deepslate_diamond_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:deepslate_emerald_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:deepslate_redstone_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:deepslate_lapis_ore: 1.125;3.375 0.135;0.405 100.0
+        minecraft:furnace: 1.125;3.375 0.135;0.405 100.0
+        minecraft:blast_furnace: 1.125;3.375 0.135;0.405 100.0
+        minecraft:smoker: 1.125;3.375 0.135;0.405 100.0
+        minecraft:crafting_table: 1.125;3.375 0.135;0.405 100.0
+        minecraft:grindstone: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stonecutter: 1.125;3.375 0.135;0.405 100.0
+        minecraft:loom: 1.125;3.375 0.135;0.405 100.0
+        minecraft:smithing_table: 1.125;3.375 0.135;0.405 100.0
+        minecraft:lectern: 1.125;3.375 0.135;0.405 100.0
+        minecraft:barrel: 1.125;3.375 0.135;0.405 100.0
+        minecraft:cartography_table: 1.125;3.375 0.135;0.405 100.0
+        minecraft:fletching_table: 1.125;3.375 0.135;0.405 100.0
+        minecraft:brewing_stand: 1.125;3.375 0.135;0.405 100.0
+        minecraft:oak_log: 1.125;3.375 0.135;0.405 100.0
+        minecraft:spruce_log: 1.125;3.375 0.135;0.405 100.0
+        minecraft:birch_log: 1.125;3.375 0.135;0.405 100.0
+        minecraft:jungle_log: 1.125;3.375 0.135;0.405 100.0
+        minecraft:acacia_log: 1.125;3.375 0.135;0.405 100.0
+        minecraft:dark_oak_log: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stripped_oak_log: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stripped_spruce_log: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stripped_birch_log: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stripped_jungle_log: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stripped_acacia_log: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stripped_dark_oak_log: 1.125;3.375 0.135;0.405 100.0
+        minecraft:oak_wood: 1.125;3.375 0.135;0.405 100.0
+        minecraft:spruce_wood: 1.125;3.375 0.135;0.405 100.0
+        minecraft:birch_wood: 1.125;3.375 0.135;0.405 100.0
+        minecraft:jungle_wood: 1.125;3.375 0.135;0.405 100.0
+        minecraft:acacia_wood: 1.125;3.375 0.135;0.405 100.0
+        minecraft:dark_oak_wood: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stripped_oak_wood: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stripped_spruce_wood: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stripped_birch_wood: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stripped_jungle_wood: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stripped_acacia_wood: 1.125;3.375 0.135;0.405 100.0
+        minecraft:stripped_dark_oak_wood: 1.125;3.375 0.135;0.405 100.0
+        minecraft:oak_planks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:spruce_planks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:birch_planks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:jungle_planks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:acacia_planks: 1.125;3.375 0.135;0.405 100.0
+        minecraft:dark_oak_planks: 1.125;3.375 0.135;0.405 100.0
+  
+  building_blocks_very_expensive:
+    Currency: vault
+    Type: building
+    SourceTable:
+      Blocks:
+        minecraft:pale_oak_log: 1.250;3.750 0.150;0.450 100.0
+        minecraft:enchanting_table: 1.250;3.750 0.150;0.450 100.0
+        minecraft:redstone_block: 1.250;3.750 0.150;0.450 100.0
+        minecraft:magma_block: 1.250;3.750 0.150;0.450 100.0
+        minecraft:iron_block: 1.250;3.750 0.150;0.450 100.0
+        minecraft:ender_chest: 1.250;3.750 0.150;0.450 100.0
+        minecraft:crimson_fungus: 1.250;3.750 0.150;0.450 100.0
+        minecraft:warped_fungus: 1.250;3.750 0.150;0.450 100.0
+        minecraft:crimson_roots: 1.250;3.750 0.150;0.450 100.0
+        minecraft:cherry_planks: 1.250;3.750 0.150;0.450 100.0
+        minecraft:brown_banner: 1.250;3.750 0.150;0.450 100.0
+        minecraft:stripped_pale_oak_log: 1.250;3.750 0.150;0.450 100.0
+        minecraft:creaking_heart: 1.250;3.750 0.150;0.450 100.0
+        minecraft:emerald_block: 1.250;3.750 0.150;0.450 100.0
+        minecraft:warped_planks: 1.250;3.750 0.150;0.450 100.0
+        minecraft:warped_wart_block: 1.250;3.750 0.150;0.450 100.0
+        minecraft:gilded_blackstone: 1.250;3.750 0.150;0.450 100.0
+        minecraft:chiseled_deepslate: 1.250;3.750 0.150;0.450 100.0
+        minecraft:polished_deepslate: 1.250;3.750 0.150;0.450 100.0
+        minecraft:cracked_deepslate_tiles: 1.250;3.750 0.150;0.450 100.0
+        minecraft:deepslate_tiles: 1.250;3.750 0.150;0.450 100.0
+        minecraft:deepslate_bricks: 1.250;3.750 0.150;0.450 100.0
+        minecraft:deepslate_cracked_bricks: 1.250;3.750 0.150;0.450 100.0
+        minecraft:polished_diorite: 1.250;3.750 0.150;0.450 100.0
+        minecraft:polished_granite: 1.250;3.750 0.150;0.450 100.0
+        minecraft:polished_andesite: 1.250;3.750 0.150;0.450 100.0
+        minecraft:mud_bricks: 1.250;3.750 0.150;0.450 100.0
+        minecraft:oak_door: 1.250;3.750 0.150;0.450 100.0
+        minecraft:spruce_door: 1.250;3.750 0.150;0.450 100.0
+        minecraft:birch_door: 1.250;3.750 0.150;0.450 100.0
+        minecraft:jungle_door: 1.250;3.750 0.150;0.450 100.0
+        minecraft:acacia_door: 1.250;3.750 0.150;0.450 100.0
+        minecraft:dark_oak_door: 1.250;3.750 0.150;0.450 100.0
+        minecraft:mangrove_door: 1.250;3.750 0.150;0.450 100.0
+        minecraft:cherry_door: 1.250;3.750 0.150;0.450 100.0
+        minecraft:bamboo_door: 1.250;3.750 0.150;0.450 100.0
+        minecraft:crimson_door: 1.250;3.750 0.150;0.450 100.0
+        minecraft:warped_door: 1.250;3.750 0.150;0.450 100.0
+        minecraft:iron_door: 1.250;3.750 0.150;0.450 100.0
+        minecraft:oak_trapdoor: 1.250;3.750 0.150;0.450 100.0
+        minecraft:spruce_trapdoor: 1.250;3.750 0.150;0.450 100.0
+        minecraft:birch_trapdoor: 1.250;3.750 0.150;0.450 100.0
+        minecraft:jungle_trapdoor: 1.250;3.750 0.150;0.450 100.0
+        minecraft:acacia_trapdoor: 1.250;3.750 0.150;0.450 100.0
+        minecraft:dark_oak_trapdoor: 1.250;3.750 0.150;0.450 100.0
+        minecraft:mangrove_trapdoor: 1.250;3.750 0.150;0.450 100.0
+        minecraft:cherry_trapdoor: 1.250;3.750 0.150;0.450 100.0
+        minecraft:bamboo_trapdoor: 1.250;3.750 0.150;0.450 100.0
+        minecraft:crimson_trapdoor: 1.250;3.750 0.150;0.450 100.0
+        minecraft:warped_trapdoor: 1.250;3.750 0.150;0.450 100.0
+        minecraft:iron_trapdoor: 1.250;3.750 0.150;0.450 100.0
+        minecraft:glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:white_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:orange_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:magenta_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:light_blue_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:yellow_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:lime_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:pink_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:gray_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:light_gray_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:cyan_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:purple_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:blue_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:brown_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:green_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:red_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:black_stained_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:tinted_glass: 1.375;4.125 0.165;0.495 100.0
+        minecraft:beacon: 1.500;4.500 0.180;0.540 100.0
+        minecraft:enchantment_table: 1.500;4.500 0.180;0.540 100.0
+# Controls which states (priorities) are allowed for this job.
+# https://nightexpressdev.com/excellentjobs/jobs/priority-limits
+# [Allowed values: PRIMARY, SECONDARY, INACTIVE]
+Allowed_States:
+- PRIMARY
+- INACTIVE
+- SECONDARY

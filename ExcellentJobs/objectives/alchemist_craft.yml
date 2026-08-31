@@ -1,0 +1,5 @@
+Type: crafting
+Sources:
+  minecraft:glass_bottle: 'JobXP 0.2~0.4 ; Income 0.02~0.04 ; ContractPoints 0.004~0.006 ; Probability 100.0~100.0 ; '
+  minecraft:brewing_stand: 'JobXP 24.0~36.0 ; Income 2.4~3.6 ; ContractPoints 0.6~0.9 ; Probability 100.0~100.0 ; '
+  minecraft:cauldron: 'JobXP 8.0~12.0 ; Income 0.8~1.2 ; ContractPoints 0.2~0.3 ; Probability 100.0~100.0 ; '

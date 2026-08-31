@@ -1,0 +1,30 @@
+Definition:
+  Name: <white><sprite:"items":"item/lapis_lazuli"></white> <gradient:#b224ef:#7579ff><b>ENCHANTER</b></gradient>
+  Description:
+  - <gray>Use magic to put powerful</gray>
+  - <gray>enchantments on tools, weapons,</gray>
+  - <gray>and armor.</gray>
+  - <gray></gray>
+  - <gray>Turn basic gear into valuable items.</gray>
+  Icon:
+    Material: minecraft:enchanting_table
+    Lore: []
+  Menu-Slots: '30'
+  Menu-Page: 1
+Behavior:
+  Permission-Required: false
+  Join-Commands: []
+  Leave-Commands: []
+Grind:
+  Bar-Color: PURPLE
+  Objective-Ids:
+  - enchanter_enchant
+Leveling:
+  Max-Level: 100
+  Reward-Pool-Ids:
+  - basic
+  Max_Level: 100
+Contract:
+  Required: true
+  Allowed-Ids:
+  - '*'

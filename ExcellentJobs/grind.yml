@@ -1,0 +1,63 @@
+General:
+  # Sets preferred currency used by the 'INCOME' objective property.
+  Preferred-Currency: vault
+  # List of grind types that should be disabled globally.
+  Disabled-Types:
+  - type_name_2
+  - type_name_1
+  # Whether Protection module is enabled.
+  # Protection module will ensure players can't abuse grind systems.
+  Protection-Enabled: true
+  Grind-Bar-Enabled: true
+BarElement:
+  Enabled: true
+  Format: <green>+%amount%</green>
+Protection:
+  # Controls whether player placed blocks will produce no rewards.
+  Track-Player-Blocks: true
+  # List of worlds, where job objectives will produce no rewards.
+  Prevent-In-Worlds:
+  - your_world_name
+  - custom_world
+  # Controls whether job objectives will produce no rewards for players in Creative mode.
+  Prevent-In-Creative: true
+  Daily-Limits:
+    # Controls whether Daily Limits enabled.
+    Enabled: false
+    # Daily limits.
+    # [>] Use '-1' for no limit.
+    # [>] Available values: [XP, INCOME, CONTRACT_POINTS, PROBABILITY]
+    # [*] The 'PROBABILITY' value is useless here.
+    Values:
+      INCOME: 100000.0
+      XP: 50000.0
+      CONTRACT_POINTS: 1000.0
+  # List of mob spawn reasons considered artifical.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html
+  Artifical-Mob-Spawns:
+  - SPAWNER
+  - TRIAL_SPAWNER
+  - EGG
+  - SPAWNER_EGG
+  - BUILD_SNOWMAN
+  - BUILD_IRONGOLEM
+  - SLIME_SPLIT
+  - DISPENSE_EGG
+  # List of block formations (generators) considered artifical.
+  Artifical-Block-Formations:
+  - minecraft:cobblestone
+  - minecraft:obsidian
+  - minecraft:stone
+  # Listed blocks will produce no rewards when fertilized by a player.
+  Forbidden-Fertilisers:
+  - '*'
+  # Controls whether job objectives will produce no rewards for players in certain vehicles.
+  Forbidden-Vehicles:
+  - minecraft:minecart
+GrindBar:
+  Tick-Interval: 1
+  Stay-Ticks: 5
+  Prefix: '%job_name% <gray>(Lv. <white>%job_level%</white>)</gray> '
+  Element-Delimiter: <gray> | </gray>
+  BossBar:
+    Overlay: PROGRESS

@@ -1,0 +1,206 @@
+# Sets display name for the job.
+# https://nightexpressdev.com/nightcore/configuration/text-formation/
+Name: '[lang].jobs.name.lumberjack[/lang] [lang].rank.clasp.e[/lang]'
+# Set description for the job.
+# https://nightexpressdev.com/nightcore/configuration/text-formation/
+Description:
+- '[lang].jobs.lore.lumberjack.1[/lang]'
+- '[lang].jobs.lore.lumberjack.2[/lang]'
+# Set icon for the job.
+# https://nightexpressdev.com/nightcore/configuration/item-formation/
+Icon:
+  Material: minecraft:iron_axe
+  Lore: []
+# When enabled, players must have 'excellentjobs.job.lumberjack' permission in order to use this job.
+Permission_Required: true
+ProgressBar:
+  # Sets color for this job progress bar.
+  # Allowed values: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+  Color: GREEN
+# Assigns the job with specified state for new players joined for the first time.
+# https://nightexpressdev.com/excellentjobs/jobs/auto-join
+# [Allowed values: PRIMARY, SECONDARY, INACTIVE]
+# [Default is INACTIVE]
+Initial_State: INACTIVE
+# The job will have no effect in listed worlds (no XP and Income).
+# https://nightexpressdev.com/excellentjobs/jobs/disabled-worlds
+Disabled_Worlds: []
+General:
+  # https://nightexpressdev.com/excellentjobs/jobs/leave-join-commands
+  JoinCommands: []
+  # https://nightexpressdev.com/excellentjobs/jobs/leave-join-commands
+  LeaveCommands: []
+Leveling:
+  # Defines max. possible job level if picked as Primary job.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  Max_Level: 100
+  # Defines initial value for the geometric XP progression.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  XP_Initial: 200
+  # Defines step value for the geometric XP progression.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  XP_Factor: 1.0584421
+  # Leveling rewards.
+  # https://nightexpressdev.com/excellentjobs/jobs/level-rewards
+  Rewards:
+    List:
+      lvl_25:
+        Levels: '25'
+        Repeatable: false
+        Name: '[lang].jobs.lumberjack_e.rewards.25[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack lumberjack_e lumberjack_e_25
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_50:
+        Levels: '50'
+        Repeatable: false
+        Name: '[lang].jobs.lumberjack_e.rewards.50[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack lumberjack_e lumberjack_e_50
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_75:
+        Levels: '75'
+        Repeatable: false
+        Name: '[lang].jobs.lumberjack_e.rewards.75[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack lumberjack_e lumberjack_e_75
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_100:
+        Levels: '100'
+        Repeatable: false
+        Name: '[lang].jobs.lumberjack_e.rewards.100[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack lumberjack_e lumberjack_e_100
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+    Modifiers:
+      money:
+        Base: 0.0
+        Per_Level: 1000.0
+        Step: 1.0
+        Action: ADD
+
+
+Daily_Limits:
+  # Defines daily Income limits on per currency basis.
+  # You can use the 'default' keyword for all currencies that are not listed here.
+  # https://nightexpressdev.com/excellentjobs/jobs/daily-limits
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  Currency:
+    vault:
+      Base: -1.0
+      Per_Level: 0.0
+      Step: 0.0
+      Action: ADD
+  # Defines daily XP limit.
+  # https://nightexpressdev.com/excellentjobs/jobs/daily-limits
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  XP:
+    Base: -1.0
+    Per_Level: 0.0
+    Step: 0.0
+    Action: ADD
+Bonus:
+  # Sets XP bonus based on player's job state and level.
+  # https://nightexpressdev.com/excellentjobs/jobs/xp-income-bonus
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  XP:
+    Primary:
+      Base: 0.0
+      Per_Level: 0.0
+      Step: 5.0
+      Action: ADD
+    Secondary:
+      Base: 0.0
+      Per_Level: 0.0
+      Step: 1.0
+      Action: ADD
+  # Sets Income bonus based on player's job state and level.
+  # https://nightexpressdev.com/excellentjobs/jobs/xp-income-bonus
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  Income:
+    Primary:
+      Base: 0.0
+      Per_Level: 0.09
+      Step: 1.0
+      Action: ADD
+    Secondary:
+      Base: -0.5
+      Per_Level: 0.09
+      Step: 1.0
+      Action: ADD
+Objectives:
+  mining_blocks:
+    Currency: vault
+    Type: mining
+    SourceTable:
+      Blocks:
+        minecraft:oak_leaves: 0.05;0.15 0.006;0.017 100.0
+        minecraft:spruce_leaves: 0.05;0.15 0.006;0.017 100.0
+        minecraft:birch_leaves: 0.05;0.15 0.006;0.017 100.0
+        minecraft:jungle_leaves: 0.05;0.15 0.006;0.017 100.0
+        minecraft:acacia_leaves: 0.05;0.15 0.006;0.017 100.0
+        minecraft:dark_oak_leaves: 0.05;0.15 0.006;0.017 100.0
+        minecraft:mangrove_leaves: 0.05;0.15 0.006;0.017 100.0
+        minecraft:cherry_leaves: 0.05;0.15 0.006;0.017 100.0
+        minecraft:azalea_leaves: 0.05;0.15 0.006;0.017 100.0
+        minecraft:flowering_azalea_leaves: 0.08;0.23 0.008;0.025 100.0
+        
+        minecraft:jungle_log: 1.25;3.75 0.138;0.413 100.0
+        minecraft:stripped_jungle_log: 1.25;3.75 0.138;0.413 100.0
+        minecraft:oak_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:stripped_oak_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:spruce_log: 1.25;3.75 0.138;0.413 100.0
+        minecraft:stripped_spruce_log: 1.25;3.75 0.138;0.413 100.0
+        minecraft:birch_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:stripped_birch_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:acacia_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:stripped_acacia_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:dark_oak_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:stripped_dark_oak_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:mangrove_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:stripped_mangrove_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:cherry_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:stripped_cherry_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:pale_oak_log: 1.50;4.50 0.165;0.495 100.0
+        minecraft:stripped_pale_oak_log: 1.50;4.50 0.165;0.495 100.0
+        
+        minecraft:bamboo: 0.25;0.75 0.028;0.083 100.0
+  
+  fertilizing_blocks:
+    Currency: vault
+    Type: fertilizing
+    SourceTable:
+      Blocks:
+        minecraft:oak_sapling: 0.13;0.38 0.014;0.041 100.0
+        minecraft:spruce_sapling: 0.13;0.38 0.014;0.041 100.0
+        minecraft:birch_sapling: 0.13;0.38 0.014;0.041 100.0
+        minecraft:jungle_sapling: 0.13;0.38 0.014;0.041 100.0
+        minecraft:acacia_sapling: 0.13;0.38 0.014;0.041 100.0
+        minecraft:dark_oak_sapling: 0.13;0.38 0.014;0.041 100.0
+        minecraft:cherry_sapling: 0.13;0.38 0.014;0.041 100.0
+        minecraft:mangrove_propagule: 0.13;0.38 0.014;0.041 100.0
+        minecraft:azalea: 0.13;0.38 0.014;0.041 100.0
+        minecraft:flowering_azalea: 0.15;0.45 0.017;0.050 100.0
+# Controls which states (priorities) are allowed for this job.
+# https://nightexpressdev.com/excellentjobs/jobs/priority-limits
+# [Allowed values: PRIMARY, SECONDARY, INACTIVE]
+Allowed_States:
+- PRIMARY
+- INACTIVE
+- SECONDARY

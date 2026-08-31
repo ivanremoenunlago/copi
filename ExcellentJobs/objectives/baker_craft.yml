@@ -1,0 +1,12 @@
+Type: crafting
+Sources:
+  minecraft:sugar: 'JobXP 0.2~0.4 ; Income 0.01~0.03 ; ContractPoints 0.002~0.006 ; Probability 100.0~100.0 ; '
+  minecraft:cookie: 'JobXP 0.4~0.6000000000000001 ; Income 0.04~0.06 ; ContractPoints 0.01~0.015 ; Probability 100.0~100.0 ; '
+  minecraft:bread: 'JobXP 1.6~2.4000000000000004 ; Income 0.16~0.24 ; ContractPoints 0.04~0.06 ; Probability 100.0~100.0 ; '
+  minecraft:pumpkin_pie: 'JobXP 4.0~6.0 ; Income 0.4~0.6 ; ContractPoints 0.1~0.15 ; Probability 100.0~100.0 ; '
+  minecraft:mushroom_stew: 'JobXP 4.0~6.0 ; Income 0.4~0.6 ; ContractPoints 0.1~0.15 ; Probability 100.0~100.0 ; '
+  minecraft:beetroot_soup: 'JobXP 4.0~6.0 ; Income 0.4~0.6 ; ContractPoints 0.1~0.15 ; Probability 100.0~100.0 ; '
+  minecraft:cake: 'JobXP 16.0~24.0 ; Income 1.6~2.4 ; ContractPoints 0.4~0.6 ; Probability 100.0~100.0 ; '
+  minecraft:rabbit_stew: 'JobXP 8.0~12.0 ; Income 0.8~1.2 ; ContractPoints 0.2~0.3 ; Probability 100.0~100.0 ; '
+  minecraft:golden_carrot: 'JobXP 8.0~12.0 ; Income 0.8~1.2 ; ContractPoints 0.2~0.3 ; Probability 100.0~100.0 ; '
+  minecraft:golden_apple: 'JobXP 40.0~60.0 ; Income 4.0~6.0 ; ContractPoints 1.0~1.5 ; Probability 100.0~100.0 ; '

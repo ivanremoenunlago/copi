@@ -1,0 +1,12 @@
+Type: taming
+Sources:
+  minecraft:wolf: 'JobXP 80.0~120.0 ; Income 8.0~12.0 ; ContractPoints 2.0~3.0 ; Probability 100.0~100.0 ; '
+  minecraft:cat: 'JobXP 80.0~120.0 ; Income 8.0~12.0 ; ContractPoints 2.0~3.0 ; Probability 100.0~100.0 ; '
+  minecraft:horse: 'JobXP 120.0~180.0 ; Income 12.0~18.0 ; ContractPoints 3.0~4.5 ; Probability 100.0~100.0 ; '
+  minecraft:donkey: 'JobXP 120.0~180.0 ; Income 12.0~18.0 ; ContractPoints 3.0~4.5 ; Probability 100.0~100.0 ; '
+  minecraft:mule: 'JobXP 120.0~180.0 ; Income 12.0~18.0 ; ContractPoints 3.0~4.5 ; Probability 100.0~100.0 ; '
+  minecraft:llama: 'JobXP 120.0~180.0 ; Income 12.0~18.0 ; ContractPoints 3.0~4.5 ; Probability 100.0~100.0 ; '
+  minecraft:trader_llama: 'JobXP 120.0~180.0 ; Income 12.0~18.0 ; ContractPoints 3.0~4.5 ; Probability 100.0~100.0 ; '
+  minecraft:camel: 'JobXP 120.0~180.0 ; Income 12.0~18.0 ; ContractPoints 3.0~4.5 ; Probability 100.0~100.0 ; '
+  minecraft:parrot: 'JobXP 200.0~300.0 ; Income 20.0~30.0 ; ContractPoints 5.0~7.5 ; Probability 100.0~100.0 ; '
+  minecraft:skeleton_horse: 'JobXP 400.0~600.0 ; Income 40.0~60.0 ; ContractPoints 10.0~15.0 ; Probability 100.0~100.0 ; '

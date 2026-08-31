@@ -1,0 +1,240 @@
+Features:
+  # Controls whether Boosters feature is enabled and available.
+  Boosters: true
+General:
+  # A list of worlds, where jobs will have no effect.
+  Disabled_Worlds:
+  - another_world
+  - my_world
+  # Sets whether or not '/jobs menu' command is set as default plugin command instead of '/jobs help' one.
+  Default_Menu_Command: true
+  Payment:
+    # Controls whether players get payments for their work (job objectives) instantly without a delay (interval).
+    Instant: true
+    # Sets how often (in seconds) players will get payments for their work.
+    # Players will get instant payment when leaving server.
+    # [*] Useless if 'Instant' is set on 'true'.
+    # [Default is 900 (15 minues)]
+    Interval: 1
+  ProgressBar:
+    # Enables progress bar indicating gained job XP and future income for the latest X seconds.
+    Enabled: true
+    BossBar:
+      # Controls whether job progress bar should display as Boss Bar.
+      Enabled: true
+    # Sets for how long (in seconds) progress bar will stay before reset and disappear.
+    StayTime: 8
+    # Sets title for job progress bar.
+    # You can use 'Job' placeholders: https://nightexpressdev.com/excellentjobs/placeholders
+    Title: <gray><lyellow><b>%job_name% Job</b></lyellow> (Lv. <white>%job_level%</white>) | <lred>+%exp% XP</lred> | <lgreen>+%income%</lgreen></gray>
+    # Sets style for job progress bar.
+    # Allowed values: SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20
+    Style: SOLID
+    ActionBar:
+      # Controls whether job progress bar should display in Action Bar.
+      Enabled: false
+      # Sets text for the job progression in action bar.
+      # You can use 'Job' placeholders: https://nightexpressdev.com/excellentjobs/placeholders
+      Text: <gray><lyellow><b>%job_name% Job</b></lyellow> (Lv. <white>%job_level%</white>) | <lred>+%exp% XP</lred> | <lgreen>+%income%</lgreen></gray>
+Jobs:
+  Cooldown:
+    # Controls whether the job cooldown is applied when player joins the job.
+    OnJoin: true
+    # Controls whether the job cooldown is applied when player quits the job.
+    OnLeave: true
+    # Sets job cooldown values based on player rank or permissions.
+    Values:
+      # Available values: RANK, PERMISSION
+      # ==================== RANK MODE ====================
+      # Get value by player's permission group. All keys in 'Values' list will represent permission group names.
+      # If player has none of specified groups, the 'Default_Value' setting will be used then
+      #   Values:
+      #     vip: 1 # -> Player must be in 'vip' permission group.
+      #     gold: 2 # -> Player must be in 'gold' permission group.
+      #     emerald: 3 # -> Player must be in 'emerald' permission group.
+      #
+      # ==================== PERMISSION MODE ====================
+      # Get value by player's permissions. All keys in 'Values' list will represent postfixes for the 'Permission_Prefix' setting (see below).
+      # If player has none of specified permissions, the 'Default_Value' setting will be used then
+      #   Permission_Prefix: 'example.prefix.'
+      #   Values:
+      #     vip: 1 # -> Player must have 'example.prefix.vip' permission.
+      #     gold: 2 # -> Player must have 'example.prefix.gold' permission.
+      #     emerald: 3 # -> Player must have 'example.prefix.emerald' permission.
+      Mode: RANK
+      # Sets permission prefix for the 'PERMISSION' mode.
+      Permission_Prefix: ''
+      Default_Value: 1
+      Values:
+        admin: 0
+        vip: 1
+  # Sets how many primary jobs players with certain ranks or permissions can have at the same time.
+  # Use '-1' for unlimited amount.
+  Primary_Amount:
+    # Available values: RANK, PERMISSION
+    # ==================== RANK MODE ====================
+    # Get value by player's permission group. All keys in 'Values' list will represent permission group names.
+    # If player has none of specified groups, the 'Default_Value' setting will be used then
+    #   Values:
+    #     vip: 1 # -> Player must be in 'vip' permission group.
+    #     gold: 2 # -> Player must be in 'gold' permission group.
+    #     emerald: 3 # -> Player must be in 'emerald' permission group.
+    #
+    # ==================== PERMISSION MODE ====================
+    # Get value by player's permissions. All keys in 'Values' list will represent postfixes for the 'Permission_Prefix' setting (see below).
+    # If player has none of specified permissions, the 'Default_Value' setting will be used then
+    #   Permission_Prefix: 'example.prefix.'
+    #   Values:
+    #     vip: 1 # -> Player must have 'example.prefix.vip' permission.
+    #     gold: 2 # -> Player must have 'example.prefix.gold' permission.
+    #     emerald: 3 # -> Player must have 'example.prefix.emerald' permission.
+    Mode: PERMISSION
+    # Sets permission prefix for the 'PERMISSION' mode.
+    Permission_Prefix: excellentjobs.jobs.primary.
+    Default_Value: 1
+    Values:
+      default: 1
+      f: 1
+      e: 1
+      d: 1
+      c: 1
+      b: 1
+      a: 2
+      diamond: 2
+      diamond_shard: 2
+      netherite: 2
+  # Sets how many secondary jobs players with certain ranks or permissions can have at the same time.
+  # Use '-1' for unlimited amount.
+  Secondary_Amount:
+    # Available values: RANK, PERMISSION
+    # ==================== RANK MODE ====================
+    # Get value by player's permission group. All keys in 'Values' list will represent permission group names.
+    # If player has none of specified groups, the 'Default_Value' setting will be used then
+    #   Values:
+    #     vip: 1 # -> Player must be in 'vip' permission group.
+    #     gold: 2 # -> Player must be in 'gold' permission group.
+    #     emerald: 3 # -> Player must be in 'emerald' permission group.
+    #
+    # ==================== PERMISSION MODE ====================
+    # Get value by player's permissions. All keys in 'Values' list will represent postfixes for the 'Permission_Prefix' setting (see below).
+    # If player has none of specified permissions, the 'Default_Value' setting will be used then
+    #   Permission_Prefix: 'example.prefix.'
+    #   Values:
+    #     vip: 1 # -> Player must have 'example.prefix.vip' permission.
+    #     gold: 2 # -> Player must have 'example.prefix.gold' permission.
+    #     emerald: 3 # -> Player must have 'example.prefix.emerald' permission.
+    Mode: PERMISSION
+    # Sets permission prefix for the 'PERMISSION' mode.
+    Permission_Prefix: excellentjobs.jobs.secondary.
+    Default_Value: 0
+    Values:
+      default: 0
+      e: 1
+      d: 1
+      c: 2
+      b: 2
+      a: 2
+      copper: 1
+      copper_nugget: 1
+      gold: 2
+      gold_nugget: 2
+      diamond: 2
+      diamond_shard: 2
+      netherite: 2
+  DailyLimits:
+    # Sets whether or not job's daily limits will expire right on midnight.
+    # When disabled, the whole 24 hours must be passed for limit to expire.
+    Reset_At_Midnight: true
+  # Sets whether or not leaving a job will reset all leveling progress for it.
+  Leave_Reset_Progress: false
+  # Sets whether or not players will lost their jobs for which they don't have permission(s) anymore.
+  Leave_When_Lost_Permission: true
+  Rewards:
+    # Controls whether players must manually claim unlocked job rewards in the GUI.
+    # [Default is false]
+    ClaimRequired: false
+LevelledMobs:
+  Integration:
+    KillEntity:
+      # When enabled, multiplies XP and payment amount produced by  job objective when killing mobs with levels from LevelledMobs.
+      Enabled: true
+      # Sets percent amount (%) added to a job's objective XP and payment for each mob level.
+      # Examples:
+      # ==> With value = 1, a mob with lvl 30 will produce 30% more job XP and payments.
+      # ==> With value = 0.5, a mob with lvl 30 will produce 15% more job XP and payments.
+      Multiplier: 1.0
+Zones:
+  # Enables the Zones feature.
+  # When disabled, all zones related commands & features will be unavailable.
+  Enabled: true
+  # When enabled, players will only get payments & Job XP when working inside Job Zones.
+  Strict_Mode: false
+  # When enabled, prevents players from entering zones that are not available for them.
+  # Examples: When player don't have permission to specific zone; when current server time is not in zone hours, etc.
+  # You can disable this setting if you're experiencing performance issues related to the 'PlayerMoveEvent' from this plugin.
+  # Even if disabled, it still won't allow players to have zone bonuses and the whole ability to work there unless all conditions are met.
+  Control_Entrance: true
+  # Item used to define zone's cuboid.
+  WandItem:
+    Material: minecraft:blaze_rod
+    Display_Name: <lyellow><b>Zone Wand</b></lyellow>
+    Lore:
+    - <dgray>(Drop to exit selection mode)</dgray>
+    - ''
+    - <lyellow>[▶] </lyellow><lgray>Left-Click to <lyellow>set 1st</lyellow> point.</lgray>
+    - <lyellow>[▶] </lyellow><lgray>Right-Click to <lyellow>set 2nd</lyellow> point.</lgray>
+  RegenerationTask:
+    # Sets how often (in seconds) plugin will attempt to regnerate blocks in job zones.
+    Interval: 5
+  Highlighting:
+    # Block type used for a fake block display entity for zone selection's corners.
+    # [Default is white_stained_glass]
+    CornerBlock: WHITE_STAINED_GLASS
+    # Block type used for a fake block display entity for zone selection's corners connections.
+    # [Default is iron_chain]
+    WireBlock: CHAIN
+Leveling:
+  # Sets whether or not a random firework will be spawned above the player on job level up.
+  Fireworks: true
+Abuse_Protection:
+  # Sets whether or not plugin will track player placed blocks. Player placed blocks will give no rewards when mined.
+  Track_Player_Blocks: true
+  # Mobs spawned by the following reasons will give no job XP / currency.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/event/entity/CreatureSpawnEvent.SpawnReason.html
+  Ignore_SpawnReasons:
+  - TRIAL_SPAWNER
+  - SPAWNER
+  - BUILD_IRONGOLEM
+  - SPAWNER_EGG
+  - BUILD_SNOWMAN
+  - SLIME_SPLIT
+  - DISPENSE_EGG
+  - EGG
+  # A list of player GameModes where no job XP / currency will be given.
+  # https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/GameMode.html
+  Ignore_GameModes:
+  - CREATIVE
+  # The following blocks generated/formed by world mechanics will give no job XP / currency.
+  # Take block names from F3 debug screen wihout the 'minecraft:' prefix.
+  Ignore_Block_Generation:
+  - OBSIDIAN
+  - COBBLESTONE
+  - STONE
+  # The following blocks will give no job XP / currency if been fertilized by bone meal.
+  # Add '*' to the list to include all possible blocks.
+  # List of all block names: https://minecraft.wiki/w/Java_Edition_data_values#Blocks
+  Ignore_Fertilized:
+  - '*'
+  # When enabled, players will get no XP / money for doing job objectives while in vehicle.
+  # Vehicles are all non-living entities (e.g. minecarts, boats, etc.)
+  Ignore_Vehicles: false
+  # Controls whether job objectives will produce XP & Income for mobs killed by player's pets.
+  Restrict_Pet_Kills: false
+Statistic:
+  # Sets whether or not Statistics module is enabled.
+  # When disabled, all job statistics including top stats will be unavailable.
+  Enabled: true
+  # Sets how often (in seconds) statistic will be fetched and updated.
+  Update_Interval: 600
+  # Sets how many entries per leaderboard page will be displated.
+  Entries_Per_Page: 10

@@ -1,0 +1,6 @@
+Type: killing
+Sources:
+  minecraft:cod: 'JobXP 3.2~4.800000000000001 ; Income 0.32~0.48 ; ContractPoints 0.08~0.12 ; Probability 100.0~100.0 ; '
+  minecraft:salmon: 'JobXP 3.2~4.800000000000001 ; Income 0.32~0.48 ; ContractPoints 0.08~0.12 ; Probability 100.0~100.0 ; '
+  minecraft:tropical_fish: 'JobXP 4.800000000000001~7.2 ; Income 0.48~0.72 ; ContractPoints 0.12~0.18 ; Probability 100.0~100.0 ; '
+  minecraft:pufferfish: 'JobXP 4.800000000000001~7.2 ; Income 0.48~0.72 ; ContractPoints 0.12~0.18 ; Probability 100.0~100.0 ; '

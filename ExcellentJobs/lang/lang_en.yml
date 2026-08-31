@@ -1,0 +1,228 @@
+GrindObjectiveProperty:
+  CONTRACT_POINTS: Contract Points
+  INCOME: Income
+  PROBABILITY: Probability
+  XP: Xp
+Command:
+  Argument:
+    Name:
+      Job: job
+      Zone: zone
+  Reset:
+    Desc: Reset job progress.
+    Done: <gray>Successfully reset <yellow>%job_name%</yellow> progress for <yellow>%player_name%</yellow>.</gray>
+  Syntax:
+    InvalidJobArgument: <gray><red>%input%</red> is not a valid job!</gray>
+    InvalidZoneArgument: <gray><red>%input%</red> is not a valid zone!</gray>
+  Zone:
+    Desc: Zone commands.
+    Create:
+      Desc: Create a new zone from selection.
+    Wand:
+      Desc: Get zone selection tool.
+  Join:
+    Desc: Join a job.
+  Leave:
+    Desc: Leave a job.
+  Menu:
+    Desc: Open Jobs GUI.
+Job:
+  Error:
+    NoPermission: '[sound="minecraft:entity.villager.no;0.8;1.0"]<gray>You do not have access to the <red>%job_name%</red> job.</gray>'
+    NotEmployed: '[sound="minecraft:entity.villager.no;0.8;1.0"]<gray>You are not employed for the <red>%job_name%</red> job.</gray>'
+  Join:
+    AlreadyHired: '[sound="minecraft:entity.villager.no;0.8;1.0"]<gray>You''re already hired for the <red>%job_name%</red> job!</gray>'
+    LimitReached: '[sound="minecraft:entity.villager.no;0.8;1.0"]<gray>You can''t get more than <red>%amount%</red> jobs!</gray>'
+    Success: '[sound="minecraft:entity.player.levelup;0.8;1.0"]<gray>You have got the <green>%job_name%</green> job.</gray>'
+  Leave:
+    Cooldown: '[sound="minecraft:entity.villager.no;0.8;1.0"]<gray>You still have to work for another <red>%time%</red> before you can leave <white>%job_name%</white> job!</gray>'
+    Success: '[sound="minecraft:block.wooden_door.close;0.8;1.0"]<gray>You have quit your <green>%job_name%</green> job.</gray>'
+  Job:
+    Placeholder:
+      JobName:
+        Delimiter: ', '
+  Dialog:
+    Quit:
+      Title: <yellow><b>JOB</b></yellow><dark_gray> » </dark_gray><white>Quit</white>
+      Body:
+        Contents:
+        - You're about to quit the <yellow>%job_name%</yellow> job.
+        - ''
+        - <soft_red>Please review the terms and conditions before confirming:</soft_red>
+        - ''
+        - <red>- All leveling progress will be reset;</red>
+        - <red>- Your stats for this job will be excluded from leaderboards;</red>
+        - <red>- You will no longer be able to work in certain job zones;</red>
+        Width: 400
+    Join:
+      Title: <yellow><b>JOB</b></yellow><dark_gray> » </dark_gray><white>Joining</white>
+      Body:
+        Contents:
+        - You're about to join the <yellow>%job_name%</yellow> job.
+        - ''
+        - <orange>Please review the job details before confirming:</orange>
+        - ''
+        - '%job_description%'
+        - ''
+        - <green>After confirming, you'll be prompted to select a job contract.</green>
+        Width: 400
+Other:
+  NA: N/A
+Grind:
+  Protection:
+    LimitReached: '[sound="minecraft:block.bell.resonate;0.8;1.0"]<gray>You have reached your <white>%type%</white> limit for the <white>%job_name%</white> job. This limit will expire in <orange>%time%</orange></gray>'
+Leveling:
+  Command:
+    Levels:
+      Desc: Browse job levels.
+    Level:
+      Desc: Level management.
+      Give:
+        Desc: Add levels to player's job.
+      Take:
+        Desc: Take levels from player's job.
+    XP:
+      Desc: XP management.
+      Give:
+        Desc: Add XP to player's job.
+      Take:
+        Desc: Take XP from player's job.
+  GiveXP:
+    Notify: <gray><gold>%amount% XP</gold> has been added to your <white>%job_name%</white> job.</gray>
+    Feedback: <gray>You have added <gold>%amount% XP</gold> to <white>%player_name%</white>'s <white>%job_name%</white> job.</gray>
+  TakeXP:
+    Notify: <gray><gold>%amount% XP</gold> has been taken from your <white>%job_name%</white> job.</gray>
+    Feedback: <gray>You have removed <gold>%amount% XP</gold> from <white>%player_name%</white>'s <white>%job_name%</white> job.</gray>
+  GiveLevel:
+    Notify: <gray><gold>%amount% level(s)</gold> has been added to your <white>%job_name%</white> job.</gray>
+    Feedback: <gray>You have added <gold>%amount% level(s)</gold> to <white>%player_name%</white>'s <white>%job_name%</white> job.</gray>
+  TakeLevel:
+    Notify: <gray><gold>%amount% level(s)</gold> has been taken from your <white>%job_name%</white> job.</gray>
+    Feedback: <gray>You have removed <gold>%amount% level(s)</gold> from <white>%player_name%</white>'s <white>%job_name%</white> job.</gray>
+  Level:
+    Up:
+    - '[title_times="20:60:20",type="title",sound="minecraft:entity.player.levelup;0.8;1.0"]'
+    - <green><b>Level Up!</b></green>
+    - <gray>Your <green>%job_name%</green> job is now level <green>%job_level%</green>!</gray>
+    Downgrade:
+    - '[title_times="20:60:20",type="title",sound="minecraft:entity.iron_golem.death;0.8;1.0"]'
+    - <red><b>Level Downgrade</b></red>
+    - <gray>Your <red>%job_name%</red> job level downgraded to <red>%job_level%</red>.</gray>
+  Rewards:
+    Notify:
+    - '[prefix="false"]'
+    - ' '
+    - <yellow><b><u>Level Rewards</u></b></yellow>
+    - ' '
+    - <gray>You have <yellow>%amount%</yellow> unclaimed rewards in <yellow>%job_name%</yellow> job.</gray>
+    - <gray>Click <click:run_command:"/jobs levels %job_id%"><yellow>[Here]</yellow></click> to claim now!</gray>
+    - ' '
+    AutoClaimed:
+    - '[prefix="false"]'
+    - ' '
+    - <yellow><b>Level Rewards:</b></yellow>
+    - <dark_gray>Hover over reward name for details.</dark_gray>
+    - ' '
+    - '%entry%'
+    - ' '
+    Entry: <yellow>✔ <hover:show_text:"<gray>%reward_description%</gray>"><gray>%reward_name%</gray></hover></yellow>
+Contract:
+  Selection:
+    JobNothing: '[sound="minecraft:entity.villager.no;0.8;1.0"]<gray>There are no contracts available for the <white>%job_name%</white> job.</gray>'
+  Activation:
+    NotAvailable: '[sound="minecraft:entity.villager.no;0.8;1.0"]<gray>You do not met requirements for the <red>%contract_name%</red> contract.</gray>'
+    Cooldown: '[sound="minecraft:entity.villager.no;0.8;1.0"]<soft_red>You still have to work for another <red>%time%</red> in this contract before you can change it.</soft_red>'
+    Success:
+    - '[title_times="20:60:20",type="title",sound="minecraft:entity.player.levelup;0.8;1.0"]'
+    - '<green><b>CONTRACT: </b></green><white>%contract_name%</white>'
+    - <gray><white>%job_name%</white> job contract successfully activated.</gray>
+  JobLeave:
+    ActiveContract: '[sound="minecraft:entity.villager.no;0.8;1.0"]<soft_red>You must cancel your current job contract first before you can quit a job.</soft_red>'
+  Cancellation:
+    Cooldown: '[sound="minecraft:entity.villager.no;0.8;1.0"]<soft_red>You still have to work for another <red>%time%</red> in this contract before you can cancel it.</soft_red>'
+    Success:
+    - '[title_times="20:60:20",type="title",sound="minecraft:entity.generic.explode;0.8;1.0"]'
+    - '<red><b>CONTRACT: </b></red><white>Cancelled</white>'
+    - <gray><white>%job_name%</white> job contract successfully cancelled.</gray>
+  Promotion:
+    Start:
+      Disabled: '[sound="minecraft:entity.villager.no;0.8;1.0"]<gray>This contract does not allows promotions.</gray>'
+      Cooldown: '[sound="minecraft:entity.villager.no;0.8;1.0"]<gray>You can start promotion again in <red>%time%</red></gray>'
+      Already: '[sound="minecraft:entity.villager.no;0.8;1.0"]<gray>You''re already in promotion of this contract.</gray>'
+      Completed: '[sound="minecraft:entity.villager.no;0.8;1.0"]<gray>You have already completed promotion of this contract.</gray>'
+      Success:
+      - '[title_times="20:80:20",type="title",sound="minecraft:entity.player.levelup;0.8;1.0"]'
+      - <green><b>Contract Promotion</b></green>
+      - <gray>Started <white>%contract_name%</white> contract promotion for <white>%job_name%</white> job.</gray>
+      Details:
+      - '[prefix="false"]'
+      - ''
+      - <gold><b>PROMOTION INFO:</b></gold>
+      - '<dark_gray> » </dark_gray><gray>Points Required: <white>%amount%</white></gray>'
+      - '<dark_gray> » </dark_gray><gray>Timeleft: <white>%time%</white></gray>'
+    Result:
+      Failure: <gray>You have failed <red>%contract_name%</red> contract promotion for the <white>%job_name%</white> job.</gray>
+      Completed: <gray>You have completed <green>%contract_name%</green> contract promotion for the <white>%job_name%</white> job!</gray>
+  Error:
+    NoActiveContract: '[sound="minecraft:entity.villager.no;0.8;1.0"]<gray>You do not have an active contract.</gray>'
+  Other:
+    CostDelimiter: ', '
+  Dialog:
+    Activation:
+      Title: <yellow><b>CONTRACT</b></yellow><dark_gray> » </dark_gray><white>Activation</white>
+      Body:
+        Contents:
+        - You're about to activate the <yellow>%contract_name%</yellow> contract for <green>%job_name%</green> job.
+        - ''
+        - <soft_red>Please review the terms and conditions of the contract before confirming:</soft_red>
+        - ''
+        - '%contract_description%'
+        Width: 400
+    Cancellation:
+      Title: <yellow><b>CONTRACT</b></yellow><dark_gray> » </dark_gray><white>Cancellation</white>
+      Body:
+        Contents:
+        - You're about to cancel the <yellow>%contract_name%</yellow> contract for <red>%job_name%</red> job.
+        - ''
+        - <soft_red>Please review the terms and conditions of the cancellation before confirming:</soft_red>
+        - ''
+        - <red>- All promotion progress will be reset;</red>
+        - <red>- A promotion cooldown will be applied;</red>
+        - <red>- A contract switch cooldown will be applied;</red>
+        Width: 400
+    Promotion:
+      Title: <yellow><b>CONTRACT</b></yellow><dark_gray> » </dark_gray><white>Promotion</white>
+      Body:
+        Contents:
+        - You're about to start promotion for the <yellow>%contract_name%</yellow> contract of <gold>%job_name%</gold> job.
+        - ''
+        - <soft_red>Please review the terms and conditions of the promotion before confirming:</soft_red>
+        - ''
+        - <orange>- You will have a limited time to complete it;</orange>
+        - <orange>- In case of failure, you will have to wait before you can try again;</orange>
+        - <orange>- Promotion can not be cancelled once started;</orange>
+        - <orange>- Promotion progress resets if you cancel the contract or quit the job;</orange>
+        Width: 400
+Zone:
+  Info:
+    NotAvailable: '[type="action_bar"]<red>You can''t work in this zone currently!</red>'
+    NoPvP: '[type="action_bar"]<red>PvP is disabled in this zone!</red>'
+  Creation:
+    BadName: <gray>The name you specified can not be used for zone ID.</gray>
+    Success: <gray>You have successfully created <green>%zone_name%</green> job zone!</gray>
+    Override: <gray>You have successfully updated region of <green>%zone_name%</green> zone!</gray>
+    Info: <gray>Select two corners and use <green>/jobzone define</green> to create a new zone.</gray>
+  Error:
+    AlreadyExists: <gray>There is already a zone created with the specified ID <red>%name%</red>.</gray>
+    IncompleteSelection: <gray>You must select 2 region corners to define a zone region!</gray>
+  Selection:
+    Info: <gray>Selected <yellow>#%value%</yellow> zone position.</gray>
+Stats:
+  TopEntry:
+    Empty: < none >
+  UI:
+    Leaderboard:
+      Entry:
+        Name: <yellow>#%pos%</yellow> <white>%player_name%</white>
+        Lore:
+        - <green>%score%</green>

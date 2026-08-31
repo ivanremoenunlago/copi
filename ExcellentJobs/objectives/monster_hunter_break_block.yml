@@ -1,0 +1,3 @@
+Type: mining
+Sources:
+  minecraft:spawner: 'JobXP 40.0~60.0 ; Income 50.0~100.0 ; ContractPoints 2.0~4.0 ; Probability 100.0~100.0 ; '

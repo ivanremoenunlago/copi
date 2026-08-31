@@ -1,0 +1,197 @@
+# Sets display name for the job.
+# https://nightexpressdev.com/nightcore/configuration/text-formation/
+Name: '[lang].jobs.name.enchanter[/lang] [lang].rank.clasp.b[/lang]'
+# Set description for the job.
+# https://nightexpressdev.com/nightcore/configuration/text-formation/
+Description:
+- '[lang].jobs.lore.enchanter.1[/lang]'
+- '[lang].jobs.lore.enchanter.2[/lang]'
+# Set icon for the job.
+# https://nightexpressdev.com/nightcore/configuration/item-formation/
+Icon:
+  Material: minecraft:enchanting_table
+  Lore: []
+# When enabled, players must have 'excellentjobs.job.enchanter' permission in order to use this job.
+Permission_Required: true
+ProgressBar:
+  # Sets color for this job progress bar.
+  # Allowed values: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+  Color: GREEN
+# Assigns the job with specified state for new players joined for the first time.
+# https://nightexpressdev.com/excellentjobs/jobs/auto-join
+# [Allowed values: PRIMARY, SECONDARY, INACTIVE]
+# [Default is INACTIVE]
+Initial_State: INACTIVE
+# The job will have no effect in listed worlds (no XP and Income).
+# https://nightexpressdev.com/excellentjobs/jobs/disabled-worlds
+Disabled_Worlds: []
+General:
+  # https://nightexpressdev.com/excellentjobs/jobs/leave-join-commands
+  JoinCommands: []
+  # https://nightexpressdev.com/excellentjobs/jobs/leave-join-commands
+  LeaveCommands: []
+Leveling:
+  # Defines max. possible job level if picked as Primary job.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  Max_Level: 100
+  # Defines initial value for the geometric XP progression.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  XP_Initial: 500
+  # Defines step value for the geometric XP progression.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  XP_Factor: 1.0584421
+  # Leveling rewards.
+  # https://nightexpressdev.com/excellentjobs/jobs/level-rewards
+  Rewards:
+    List:
+      lvl_25:
+        Levels: '25'
+        Repeatable: false
+        Name: '[lang].jobs.enchanter.rewards.25[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack enchanter_b enchanter_b_25
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_50:
+        Levels: '50'
+        Repeatable: false
+        Name: '[lang].jobs.enchanter.rewards.50[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack enchanter_b enchanter_b_50
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_75:
+        Levels: '75'
+        Repeatable: false
+        Name: '[lang].jobs.enchanter.rewards.75[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack enchanter_b enchanter_b_75
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_100:
+        Levels: '100'
+        Repeatable: false
+        Name: '[lang].jobs.enchanter.rewards.100[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack enchanter_b enchanter_b_100
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+    Modifiers:
+      money:
+        Base: 0.0
+        Per_Level: 1000.0
+        Step: 1.0
+        Action: ADD
+
+Daily_Limits:
+  # Defines daily Income limits on per currency basis.
+  # You can use the 'default' keyword for all currencies that are not listed here.
+  # https://nightexpressdev.com/excellentjobs/jobs/daily-limits
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  Currency:
+    vault:
+      Base: -1.0
+      Per_Level: 0.0
+      Step: 0.0
+      Action: ADD
+  # Defines daily XP limit.
+  # https://nightexpressdev.com/excellentjobs/jobs/daily-limits
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  XP:
+    Base: -1.0
+    Per_Level: 0.0
+    Step: 0.0
+    Action: ADD
+Bonus:
+  # Sets XP bonus based on player's job state and level.
+  # https://nightexpressdev.com/excellentjobs/jobs/xp-income-bonus
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  XP:
+    Primary:
+      Base: 0.0
+      Per_Level: 0.0
+      Step: 5.0
+      Action: ADD
+    Secondary:
+      Base: 0.0
+      Per_Level: 0.0
+      Step: 1.0
+      Action: ADD
+  # Sets Income bonus based on player's job state and level.
+  # https://nightexpressdev.com/excellentjobs/jobs/xp-income-bonus
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  Income:
+    Primary:
+      Base: 0.0
+      Per_Level: 0.09
+      Step: 1.0
+      Action: ADD
+    Secondary:
+      Base: -0.5
+      Per_Level: 0.09
+      Step: 1.0
+      Action: ADD
+Objectives:
+  enchanting:
+    Currency: vault
+    Type: enchanting
+    SourceTable:
+      LevelBonus: 25.0 # XP and Income bonus (in %) per enchantment level. Default is +25%.
+      Enchantments:
+        minecraft:protection: 14.80;44.39 2.071;6.214 100.0
+        minecraft:fire_protection: 14.80;44.39 2.071;6.214 100.0
+        minecraft:feather_falling: 14.80;44.39 2.071;6.214 100.0
+        minecraft:blast_protection: 14.80;44.39 2.071;6.214 100.0
+        minecraft:projectile_protection: 14.80;44.39 2.071;6.214 100.0
+        minecraft:respiration: 16.52;49.55 2.312;6.936 100.0
+        minecraft:aqua_affinity: 22.50;67.50 3.150;9.450 100.0
+        minecraft:thorns: 16.52;49.55 2.312;6.936 100.0
+        minecraft:depth_strider: 16.52;49.55 2.312;6.936 100.0
+        minecraft:sharpness: 14.80;44.39 2.071;6.214 100.0
+        minecraft:smite: 14.80;44.39 2.071;6.214 100.0
+        minecraft:bane_of_arthropods: 14.80;44.39 2.071;6.214 100.0
+        minecraft:knockback: 18.90;56.70 2.646;7.938 100.0
+        minecraft:fire_aspect: 18.90;56.70 2.646;7.938 100.0
+        minecraft:looting: 16.52;49.55 2.312;6.936 100.0
+        minecraft:sweeping_edge: 16.52;49.55 2.312;6.936 100.0
+        minecraft:power: 14.80;44.39 2.071;6.214 100.0
+        minecraft:punch: 18.90;56.70 2.646;7.938 100.0
+        minecraft:flame: 22.50;67.50 3.150;9.450 100.0
+        minecraft:infinity: 22.50;67.50 3.150;9.450 100.0
+        minecraft:efficiency: 14.80;44.39 2.071;6.214 100.0
+        minecraft:silk_touch: 22.50;67.50 3.150;9.450 100.0
+        minecraft:fortune: 16.52;49.55 2.312;6.936 100.0
+        minecraft:luck_of_the_sea: 16.52;49.55 2.312;6.936 100.0
+        minecraft:lure: 16.52;49.55 2.312;6.936 100.0
+        minecraft:unbreaking: 16.52;49.55 2.312;6.936 100.0
+        minecraft:impaling: 14.80;44.39 2.071;6.214 100.0
+        minecraft:loyalty: 16.52;49.55 2.312;6.936 100.0
+        minecraft:riptide: 16.52;49.55 2.312;6.936 100.0
+        minecraft:piercing: 14.80;44.39 2.071;6.214 100.0
+        minecraft:quick_charge: 16.52;49.55 2.312;6.936 100.0
+  
+  grindstone:
+    Currency: vault
+    Type: grindstone
+    SourceTable:
+      Items:
+        default: 0.50;1.50 0.070;0.210 100.0
+# Controls which states (priorities) are allowed for this job.
+# https://nightexpressdev.com/excellentjobs/jobs/priority-limits
+# [Allowed values: PRIMARY, SECONDARY, INACTIVE]
+Allowed_States:
+- PRIMARY
+- INACTIVE
+- SECONDARY

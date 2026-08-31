@@ -1,0 +1,143 @@
+# ==================== [SECTION] SETTINGS ====================
+# > [MenuType] : String | Represents the menu type. Allowed values: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/MenuType.html
+# > [Title] : String | Sets menu title.
+# > [Auto_Refresh] : Integer | Defines menu refresh rate in seconds. Set 0 to disable.
+# > [PlaceholderAPI -> Enabled] : Boolean | When enabled, applies PlaceholderAPI placeholders for all items in the menu per player.
+#  
+# ==================== [SECTION] CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# > [Item] : Section | Item to display.
+#     [*] Navigate to https://nightexpressdev.com/nightcore/configuration/item-formation/ for a list of available options.
+# > [Priority] : Integer | Item priority. Higher values will override other item(s) in the same slot(s).
+# > [Slots] : Int Array | Item slots, starts from 0. Split with commas.
+#     Slots: '0,4,9,10'
+# > [Type] : String | Defines item click action.
+#     [*] Available types: ['close', 'user_skin', 'page_next', 'page_previous']
+# > [Click_Commands] : Section | Executes commands on click with PlaceholderAPI support.
+#     [*] Works only if [Type] is not set (null).
+#     [*] Available click types: [LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, DRAG_N_DROP]
+#     [*] Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: warp shop
+# ==================================================
+Settings:
+  MenuType: minecraft:generic_9x5
+  Title: <black><b>Jobs</b></black>
+  Auto_Refresh: -1
+  PlaceholderAPI:
+    Enabled: false
+Job:
+  Grid:
+    Auto: false
+    AutoSlots: 20,21,22,23,24,31,30,32
+    CustomPages: 1
+    CustomSlots:
+      miner:
+        Page: 1
+        Slots: '19'
+      digger:
+        Page: 1
+        Slots: '20'
+      agriculturist:
+        Page: 1
+        Slots: '21'
+      lumberjack:
+        Page: 1
+        Slots: '22'
+      builder:
+        Page: 1
+        Slots: '23'
+      cook:
+        Page: 1
+        Slots: '24'
+      merchant:
+        Page: 1
+        Slots: '25'
+      armorer:
+        Page: 1
+        Slots: '28'
+      toolsmith:
+        Page: 1
+        Slots: '29'
+      weaponsmith:
+        Page: 1
+        Slots: '30'
+      enchanter:
+        Page: 1
+        Slots: '31'
+      master_blacksmith:
+        Page: 1
+        Slots: '32'
+  Available:
+    Name: <soft_yellow><b>%job_name%</b></soft_yellow>
+    Lore:
+    - '%state%'
+    - '<dark_gray><green>✔</green> Workers: <gray>%job_employees_total%</gray></dark_gray>'
+    - '%empty-if-below%'
+    - '%job_description%'
+    - '%empty-if-above%'
+    - <soft_yellow><b>Your Stats:</b></soft_yellow>
+    - '<soft_yellow>▪ <gray>XP: </gray>%job_xp%<gray>/</gray>%job_xp_max%</soft_yellow>'
+    - '<soft_yellow>▪ <gray>Level: </gray>%job_level%<gray>/</gray>%job_level_max%</soft_yellow>'
+    - '<soft_yellow>▪ <gray>XP Bonus: </gray>%xp_bonus%</soft_yellow> <gray>(%xp_multiplier% + %xp_boost%)</gray>'
+    - '<soft_yellow>▪ <gray>Income Bonus: </gray>%income_bonus%</soft_yellow> <gray>(%income_multiplier% + %income_boost%)</gray>'
+    - '%empty-if-below%'
+    - '%daily_limits%'
+    - '%empty-if-below%'
+    - <soft_yellow>→ <u>Click to view levels</u></soft_yellow>
+  Locked_Permission:
+    Name: <red>[Locked]</red> <gray>%job_name%</gray>
+    Lore:
+    - <gray>Upgrade your <red>/rank</red> to access this job.</gray>
+  DailyLimits:
+    Header:
+    - <soft_yellow><b>Daily Limits:</b></soft_yellow>
+    - '%currency%'
+    - '%exp%'
+    Currency:
+    - '<soft_yellow>• <gray>%currency_name%: </gray>%current%<gray>/</gray>%total%</soft_yellow>'
+    XP:
+    - '<soft_yellow>• <gray>XP: </gray>%current%<gray>/</gray>%total%</soft_yellow>'
+  StateInfo:
+    PRIMARY:
+    - <dark_gray><green>✔</green> This is your <gray>Primary</gray> job.</dark_gray>
+    SECONDARY:
+    - <dark_gray><green>✔</green> This is your <gray>Secondary</gray> job.</dark_gray>
+    INACTIVE:
+    - <dark_gray><red>✘</red> You are <gray>not an employee</gray> of this job.</dark_gray>
+Content:
+  gray_stained_glass_pane:
+    Priority: -1
+    Item:
+      Material: minecraft:gray_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
+    Type: 'null'
+  black_stained_glass_pane:
+    Priority: -1
+    Item:
+      Material: minecraft:black_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 0,1,2,3,4,5,6,7,8,36,37,38,39,40,41,42,43,44
+    Type: 'null'
+  page_next:
+    Priority: 10
+    Item:
+      Material: minecraft:arrow
+      Display_Name: <white><b><u>Next Page</u> →</b></white>
+      Lore: []
+    Slots: '35'
+    Type: page_next
+  page_previous:
+    Priority: 10
+    Item:
+      Material: minecraft:arrow
+      Display_Name: <white><b>← <u>Previous Page</u></b></white>
+      Lore: []
+    Slots: '27'
+    Type: page_previous

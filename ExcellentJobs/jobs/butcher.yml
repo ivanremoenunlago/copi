@@ -1,0 +1,32 @@
+Definition:
+  Name: <white><sprite:"items":"item/beef"></white> <gradient:#ff416c:#ff4b2b><b>BUTCHER</b></gradient>
+  Description:
+  - <gray>Kill farm animals and cook</gray>
+  - <gray>their meat to earn money.</gray>
+  - <gray></gray>
+  - <gray>Keep the server fed while making</gray>
+  - <gray>a nice profit.</gray>
+  Icon:
+    Material: minecraft:beef
+    Lore: []
+  Menu-Slots: '21'
+  Menu-Page: 1
+Behavior:
+  Permission-Required: false
+  Join-Commands: []
+  Leave-Commands: []
+Grind:
+  Bar-Color: RED
+  Objective-Ids:
+  - butcher_cook
+  - butcher_kill_mob
+  - butcher_mob_loot
+Leveling:
+  Max-Level: 100
+  Reward-Pool-Ids:
+  - basic
+  Max_Level: 100
+Contract:
+  Required: true
+  Allowed-Ids:
+  - '*'

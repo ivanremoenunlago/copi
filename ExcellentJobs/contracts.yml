@@ -1,0 +1,11 @@
+Data:
+  Cache:
+    Duration: 3600
+  Save-Interval: 5
+Contract:
+  Activation:
+    Confirmation: true
+GrindBar:
+  Element:
+    Enabled: true
+    Format: <purple>+%amount% Ct. Points</purple>

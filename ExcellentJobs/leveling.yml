@@ -1,0 +1,23 @@
+Progression:
+  Type: linear
+  # Controls whether all leveling progress will be lost when player quits the job.
+  Reset-On-Leave: false
+  Settings:
+    linear:
+      Base: 150.0
+      Step: 100.0
+Rewards:
+  Claim-Required: true
+GrindBar:
+  Element:
+    Enabled: true
+    Format: <yellow>+%amount% XP</yellow>
+Leaderboard:
+  Tracker:
+    Enabled: true
+    Name: <c:#A8E815><b>Levels</b></c>
+    Description:
+    - <gray>View players with highest levels!</gray>
+    Icon:
+      Material: minecraft:experience_bottle
+      Lore: []

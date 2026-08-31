@@ -1,0 +1,198 @@
+# Sets display name for the job.
+# https://nightexpressdev.com/nightcore/configuration/text-formation/
+Name: '[lang].jobs.name.cook[/lang] [lang].rank.clasp.d[/lang]'
+# Set description for the job.
+# https://nightexpressdev.com/nightcore/configuration/text-formation/
+Description:
+- '[lang].jobs.lore.cook.1[/lang]'
+- '[lang].jobs.lore.cook.2[/lang]'
+# Set icon for the job.
+# https://nightexpressdev.com/nightcore/configuration/item-formation/
+Icon:
+  Material: minecraft:smoker
+  Lore: []
+# When enabled, players must have 'excellentjobs.job.cook' permission in order to use this job.
+Permission_Required: true
+ProgressBar:
+  # Sets color for this job progress bar.
+  # Allowed values: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+  Color: GREEN
+# Assigns the job with specified state for new players joined for the first time.
+# https://nightexpressdev.com/excellentjobs/jobs/auto-join
+# [Allowed values: PRIMARY, SECONDARY, INACTIVE]
+# [Default is INACTIVE]
+Initial_State: PRIMARY
+# The job will have no effect in listed worlds (no XP and Income).
+# https://nightexpressdev.com/excellentjobs/jobs/disabled-worlds
+Disabled_Worlds: []
+General:
+  # https://nightexpressdev.com/excellentjobs/jobs/leave-join-commands
+  JoinCommands: []
+  # https://nightexpressdev.com/excellentjobs/jobs/leave-join-commands
+  LeaveCommands: []
+Leveling:
+  # Defines max. possible job level if picked as Primary job.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  Max_Level: 100
+  # Defines initial value for the geometric XP progression.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  XP_Initial: 300
+  # Defines step value for the geometric XP progression.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  XP_Factor: 1.0584421
+  # Leveling rewards.
+  # https://nightexpressdev.com/excellentjobs/jobs/level-rewards
+  Rewards:
+    List:
+      lvl_25:
+        Levels: '25'
+        Repeatable: false
+        Name: '[lang].jobs.cook_d.rewards.25[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack cook_d cook_d_25
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_50:
+        Levels: '50'
+        Repeatable: false
+        Name: '[lang].jobs.cook_d.rewards.50[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack cook_d cook_d_50
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_75:
+        Levels: '75'
+        Repeatable: false
+        Name: '[lang].jobs.cook_d.rewards.75[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack cook_d cook_d_75
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_90:
+        Levels: '90'
+        Repeatable: false
+        Name: '[lang].jobs.cook_d.rewards.90[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack cook_d cook_d_90
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_100:
+        Levels: '100'
+        Repeatable: false
+        Name: '[lang].jobs.cook_d.rewards.100[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack cook_d cook_d_100
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+    Modifiers:
+      money:
+        Base: 0.0
+        Per_Level: 1000.0
+        Step: 1.0
+        Action: ADD
+
+
+Daily_Limits:
+  # Defines daily Income limits on per currency basis.
+  # You can use the 'default' keyword for all currencies that are not listed here.
+  # https://nightexpressdev.com/excellentjobs/jobs/daily-limits
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  Currency:
+    vault:
+      Base: -1.0
+      Per_Level: 0.0
+      Step: 0.0
+      Action: ADD
+  # Defines daily XP limit.
+  # https://nightexpressdev.com/excellentjobs/jobs/daily-limits
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  XP:
+    Base: -1.0
+    Per_Level: 0.0
+    Step: 0.0
+    Action: ADD
+Bonus:
+  # Sets XP bonus based on player's job state and level.
+  # https://nightexpressdev.com/excellentjobs/jobs/xp-income-bonus
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  XP:
+    Primary:
+      Base: 0.0
+      Per_Level: 0.0
+      Step: 5.0
+      Action: ADD
+    Secondary:
+      Base: 0.0
+      Per_Level: 0.0
+      Step: 1.0
+      Action: ADD
+  # Sets Income bonus based on player's job state and level.
+  # https://nightexpressdev.com/excellentjobs/jobs/xp-income-bonus
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  Income:
+    Primary:
+      Base: 0.0
+      Per_Level: 0.09
+      Step: 1.0
+      Action: ADD
+    Secondary:
+      Base: -0.5
+      Per_Level: 0.09
+      Step: 1.0
+      Action: ADD
+Objectives:
+  crafting:
+    Currency: vault
+    Type: crafting
+    SourceTable:
+      Items:
+        minecraft:enchanted_golden_apple: 360.25;1080.75 43.230;129.690 100.0
+        minecraft:golden_apple: 40.25;120.75 4.830;14.490 100.0
+        minecraft:golden_carrot: 4.74;14.23 0.569;1.708 100.0
+        minecraft:beetroot_soup: 2.73;8.18 0.327;0.981 100.0
+        minecraft:cake: 2.15;6.45 0.258;0.774 100.0
+        minecraft:rabbit_stew: 1.24;3.71 0.149;0.446 100.0
+        minecraft:cookie: 0.93;2.78 0.111;0.333 100.0
+        minecraft:bread: 0.90;2.70 0.108;0.324 100.0
+        minecraft:suspicious_stew: 0.83;2.48 0.099;0.297 100.0
+        minecraft:pumpkin_pie: 0.68;2.03 0.081;0.243 100.0
+        minecraft:mushroom_stew: 0.73;2.18 0.087;0.261 100.0
+  
+  cooking:
+    Currency: vault
+    Type: cooking
+    SourceTable:
+      AutomatedSmeltBonus: 0.0 # XP and Income bonus (in %) for smelting/cooking automatically (using hoppers). Default is -80%.
+      ManualSmeltBonus: 50.0 # XP and Income bonus (in %) for smelting/cooking manually. Default is +50%.
+      Ingredients:
+        minecraft:rabbit: 0.38;1.13 0.045;0.135 100.0
+        minecraft:salmon: 0.38;1.13 0.045;0.135 100.0
+        minecraft:beef: 0.25;0.75 0.030;0.090 100.0
+        minecraft:porkchop: 0.25;0.75 0.030;0.090 100.0
+        minecraft:mutton: 0.25;0.75 0.030;0.090 100.0
+        minecraft:cod: 0.25;0.75 0.030;0.090 100.0
+        minecraft:chicken: 0.25;0.75 0.030;0.090 100.0
+        minecraft:potato: 0.10;0.30 0.012;0.036 100.0
+        minecraft:kelp: 0.05;0.15 0.006;0.018 100.0
+# Controls which states (priorities) are allowed for this job.
+# https://nightexpressdev.com/excellentjobs/jobs/priority-limits
+# [Allowed values: PRIMARY, SECONDARY, INACTIVE]
+Allowed_States:
+- PRIMARY
+- INACTIVE
+- SECONDARY

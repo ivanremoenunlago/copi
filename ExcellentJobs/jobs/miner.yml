@@ -1,0 +1,31 @@
+Definition:
+  Name: <white><sprite:"items":"item/iron_pickaxe"></white> <gradient:#f7971e:#ffd200><b>MINER</b></gradient>
+  Description:
+  - <gray>Dig deep, gather precious resources,</gray>
+  - <gray>and conquer the underground</gray>
+  - <gray>for money!</gray>
+  Icon:
+    Material: minecraft:iron_pickaxe
+    Lore: []
+  Menu-Slots: '11'
+  Menu-Page: 1
+Behavior:
+  Permission-Required: false
+  Join-Commands: []
+  Leave-Commands: []
+Grind:
+  Bar-Color: YELLOW
+  Objective-Ids:
+  - miner_block_loot
+  - miner_craft
+  - miner_break_block
+  - miner_smith
+Leveling:
+  Max-Level: 100
+  Reward-Pool-Ids:
+  - basic
+  Max_Level: 100
+Contract:
+  Required: true
+  Allowed-Ids:
+  - '*'

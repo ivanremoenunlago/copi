@@ -1,0 +1,79 @@
+Settings:
+  # Sets booster update interval.
+  # [*] Do not change unless you understand what you're doing.
+  # [Asynchronous]
+  # [Default is 1]
+  Tick_Interval: 1
+  Exclusives:
+    # Boosters will have no effect on listed currencies.
+    # https://nightexpressdev.com/economy-bridge/currencies/
+    Currency:
+    - some_currency
+    - coinsengine_super_coins
+Boosters:
+  # Global job boosters that activates at specific day times.
+  # You can define as many as you want.
+  BySchedule:
+    weekend:
+      Start_Times:
+        SATURDAY: '12:00'
+        SUNDAY: '12:00'
+      Income_Multiplier: 1.0
+      XP_Multiplier: 1.0
+      Duration: 0
+  ByRank:
+    # Persistent job income boosters applied to players based on their rank or permissions.
+    Income:
+      # Available values: RANK, PERMISSION
+      # ==================== RANK MODE ====================
+      # Get value by player's permission group. All keys in 'Values' list will represent permission group names.
+      # If player has none of specified groups, the 'Default_Value' setting will be used then
+      #   Values:
+      #     vip: 1 # -> Player must be in 'vip' permission group.
+      #     gold: 2 # -> Player must be in 'gold' permission group.
+      #     emerald: 3 # -> Player must be in 'emerald' permission group.
+      #
+      # ==================== PERMISSION MODE ====================
+      # Get value by player's permissions. All keys in 'Values' list will represent postfixes for the 'Permission_Prefix' setting (see below).
+      # If player has none of specified permissions, the 'Default_Value' setting will be used then
+      #   Permission_Prefix: 'example.prefix.'
+      #   Values:
+      #     vip: 1 # -> Player must have 'example.prefix.vip' permission.
+      #     gold: 2 # -> Player must have 'example.prefix.gold' permission.
+      #     emerald: 3 # -> Player must have 'example.prefix.emerald' permission.
+      Mode: PERMISSION
+      # Sets permission prefix for the 'PERMISSION' mode.
+      Permission_Prefix: excellentjobs.rankbooster.income.
+      Default_Value: 1.0
+      Values:
+        vip: 1.5
+        pro: 2.0
+    # Persistent job XP boosters applied to players based on their rank or permissions.
+    XP:
+      # Available values: RANK, PERMISSION
+      # ==================== RANK MODE ====================
+      # Get value by player's permission group. All keys in 'Values' list will represent permission group names.
+      # If player has none of specified groups, the 'Default_Value' setting will be used then
+      #   Values:
+      #     vip: 1 # -> Player must be in 'vip' permission group.
+      #     gold: 2 # -> Player must be in 'gold' permission group.
+      #     emerald: 3 # -> Player must be in 'emerald' permission group.
+      #
+      # ==================== PERMISSION MODE ====================
+      # Get value by player's permissions. All keys in 'Values' list will represent postfixes for the 'Permission_Prefix' setting (see below).
+      # If player has none of specified permissions, the 'Default_Value' setting will be used then
+      #   Permission_Prefix: 'example.prefix.'
+      #   Values:
+      #     vip: 1 # -> Player must have 'example.prefix.vip' permission.
+      #     gold: 2 # -> Player must have 'example.prefix.gold' permission.
+      #     emerald: 3 # -> Player must have 'example.prefix.emerald' permission.
+      Mode: PERMISSION
+      # Sets permission prefix for the 'PERMISSION' mode.
+      Permission_Prefix: jobs.xpmultiplier.
+      Default_Value: 1.0
+      Values:
+        5: 1.05
+        6: 1.06
+        8: 1.08
+        10: 1.1
+        15: 1.15

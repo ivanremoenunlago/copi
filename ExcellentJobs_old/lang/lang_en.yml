@@ -1,0 +1,294 @@
+Job:
+  State:
+    PRIMARY: Primary
+    INACTIVE: Inactive
+    SECONDARY: Secondary
+  Join:
+    Error:
+      AlreadyHired: <gray>You're already hired for the <red>%job_name%</red> job!</gray>
+      Cooldown: <gray>You can join the <red>%job_name%</red> job again in <red>%time%</red></gray>
+      StateLimit: <gray>You can't get more than <red>%amount% %state%</red> jobs!</gray>
+      GeneralLimit: <gray>You can't get more jobs!</gray>
+    NotJoinable: <gray>The <soft_yellow>%job_name%</soft_yellow> job does not accept new members currently.</gray>
+    Success:
+    - '[sound="minecraft:entity.player.levelup;0.8;1.0",prefix="false"]'
+    - ' '
+    - <gray>You joined the <yellow>%job_name%</yellow> job!</gray>
+    - ' '
+  Priority:
+    Changed: '[sound="minecraft:entity.player.levelup;0.8;1.0"]<gray>You changed <yellow>%job_name%</yellow>''s job priority to <yellow>%job_state%</yellow>.</gray>'
+  Leave:
+    Success:
+    - '[sound="minecraft:block.wooden_door.close;0.8;1.0",type="title",title_times="20:60:20"]'
+    - <green><b>Job Quit</b></green>
+    - <gray>You quit the <green>%job_name%</green> job!</gray>
+    Error:
+      NotJoined: <gray>You're not employed for the <red>%job_name%</red> job!</gray>
+      Cooldown: <gray>You can leave the <red>%job_name%</red> job in <red>%time%</red></gray>
+      NotAllowed: <gray>You can't leave the <red>%job_name%</red> job!</gray>
+  Reset:
+    Notify:
+    - '[sound="minecraft:entity.zombie.break_wooden_door;0.8;1.0",type="title",title_times="20:60:20"]'
+    - <green><b>Job Reset!</b></green>
+    - <gray>All <green>%job_name%</green> progress have been reset!</gray>
+  Payment:
+    Notify: '[prefix="false"]<gray><green>[$]</green> You got paid for the <white>%job_name%</white>''s work: <green>%amount%</green></gray>'
+  XP:
+    Gain: <gray>You gain <yellow>%amount% XP</yellow> for <yellow>%job_name%</yellow> job.</gray>
+    Lose: <gray>You lost <red>%amount% XP</red> from <red>%job_name%</red> job.</gray>
+  Level:
+    Up:
+    - '[sound="minecraft:entity.player.levelup;0.8;1.0",type="title",title_times="20:60:20"]'
+    - <green><b>Job Level Up!</b></green>
+    - <gray><green>%job_name%</green> is now level <green>%job_level%</green>!</gray>
+    Down:
+    - '[sound="minecraft:entity.iron_golem.death;0.8;1.0",type="title",title_times="20:60:20"]'
+    - <red><b>Job Level Down!</b></red>
+    - <gray><red>%job_name%</red> is now level <red>%job_level%</red>!</gray>
+    Rewards:
+      List:
+      - '[prefix="false"]'
+      - ' '
+      - <yellow><b>Level Rewards:</b></yellow>
+      - <dark_gray>Hover over reward name for details.</dark_gray>
+      - ' '
+      - '%entry%'
+      - ' '
+      Entry: <yellow>✔ <hover:show_text:"<gray>%reward_description%</gray>"><gray>%reward_name%</gray></hover></yellow>
+  Rewards:
+    Notify:
+    - '[prefix="false"]'
+    - ' '
+    - <soft_yellow><b><u>Job Notification</u></b></soft_yellow>
+    - ' '
+    - <gray>You have <soft_yellow>%amount%</soft_yellow> unclaimed rewards in <soft_yellow>%job_name%</soft_yellow> job.</gray>
+    - <gray>Click <click:run_command:"/jobs levels %job_id%"><soft_yellow>[Here]</soft_yellow></click> to claim now!</gray>
+    - ' '
+  Limit:
+    XP:
+      Notify: <gray>You have reached daily <red>XP</red> limit for <red>%job_name%</red> job. You can't get more today.</gray>
+    Currency:
+      Notify: <gray>You have reached daily <red>%currency_name%</red> limit for <red>%job_name%</red> job. You can't get more today.</gray>
+BoosterType:
+  GLOBAL: Global
+  PERSONAL: Personal
+  RANK: Rank
+Command:
+  Argument:
+    Name:
+      Zone: zone
+      Currency: currency
+      Job: job
+      JobState: job state
+      XPMultiplier: xp mult
+      PayMultiplier: pay mult
+      Duration: duration
+      Page: page
+      Action: action
+  Zone:
+    Desc: Zone commands.
+    Create:
+      Desc: Create a new zone from selection.
+    Wand:
+      Desc: Get zone selection tool.
+    Editor:
+      Desc: Open zones editor.
+  Level:
+    Desc: Level management.
+    Add:
+      Done: <gray>Added <green>%amount%</green> level(s) to <green>%player_name%</green>'s <green>%job_name%</green> job.</gray>
+    Remove:
+      Done: <gray>Removed <red>%amount%</red> level(s) from <red>%player_name%</red>'s <red>%job_name%</red> job.</gray>
+    Set:
+      Done: <gray>Set <yellow>%amount%</yellow> level for <yellow>%player_name%</yellow>'s <yellow>%job_name%</yellow> job.</gray>
+  XP:
+    Desc: XP management.
+    Add:
+      Done: <gray>Added <green>%amount%</green> XP to <green>%player_name%</green>'s <green>%job_name%</green> job.</gray>
+    Remove:
+      Done: <gray>Removed <red>%amount%</red> XP from <red>%player_name%</red>'s <red>%job_name%</red> job.</gray>
+    Set:
+      Done: <gray>Set <yellow>%amount%</yellow> XP for <yellow>%player_name%</yellow>'s <yellow>%job_name%</yellow> job.</gray>
+  Reset:
+    Desc: Reset job progress.
+    Done: <gray>Successfully reset <yellow>%job_name%</yellow> progress for <yellow>%player_name%</yellow>.</gray>
+  Menu:
+    Desc: Open Jobs GUI.
+  Levels:
+    Desc: Browse job levels.
+  Join:
+    Desc: Join a job.
+  Leave:
+    Desc: Leave a job.
+  SetState:
+    Desc: Set player's job state.
+    Done: <gray>Set <yellow>%state%</yellow> state for <yellow>%player_name%</yellow>'s <yellow>%job_name%</yellow> job!</gray>
+  Top:
+    Desc: List most levelled players.
+    List:
+    - '[prefix="false"]'
+    - ' '
+    - <yellow><b>%job_name% Level Top:</b></yellow>
+    - ' '
+    - '%entry%'
+    - ' '
+    - <gray>Page <yellow>%current%</yellow> of <yellow>%max%</yellow>.</gray>
+    - ' '
+    Entry: '<gray><yellow>%pos%. </yellow>%player_name%: <yellow>%amount%</yellow> Levels</gray>'
+  Stats:
+    Desc: View job stats.
+    Display:
+      Info:
+      - '[prefix="false"]'
+      - ' '
+      - <yellow><orange>%player_name%</orange>'s Job Stats:</yellow>
+      - ' '
+      - '%entry%'
+      - ' '
+      Job: '<gray><orange>▪ </orange>%job_name%:   Level: <orange>%job_level%</orange>, XP: <orange>%job_xp%</orange>/<orange>%job_xp_max%</orange></gray>'
+  Boosters:
+    Desc: View all current boosters.
+  Booster:
+    Desc: Booster management.
+    Activate:
+      Desc: Activate global scheduled booster.
+      Done: <gray>Booster activated!</gray>
+    Create:
+      Desc: Create global or player booster.
+      Done:
+        Global: <gray>Added global <yellow>%booster_xp_percent% XP</yellow> <yellow>%booster_income_percent% Payment</yellow> job booster <gray>(<white>%time%</white>)</gray></gray>
+        Personal: <gray>Added personal <yellow>%booster_xp_percent% XP</yellow> <yellow>%booster_income_percent% Payment</yellow> job booster <gray>(<white>%time%</white>)</gray> for <yellow>%player_name%</yellow>'s <yellow>%job_name%</yellow> job.</gray>
+    Info:
+      Desc: View active booster names.
+    Removal:
+      Desc: Remove global or personal booster.
+    Remove:
+      Done:
+        Personal: <gray>Disabled <yellow>%player_name%</yellow>'s <yellow>%job_name%</yellow> job booster.</gray>
+        Global: <gray>Disabled global job booster.</gray>
+      Error:
+        Nothing: <red>There is no booster.</red>
+Booster:
+  Activated:
+    Global:
+    - '[sound="minecraft:block.note_block.bell;0.8;1.0",prefix="false"]'
+    - ' '
+    - <yellow><b>Job Booster Activated!</b></yellow>
+    - ' '
+    - <i><gray>Available for <white>all jobs</white> and <white>all players</white>!</gray></i>
+    - ' '
+    - '<yellow>✔ <gray>XP Boost: </gray>%booster_xp_percent%</yellow>'
+    - '<yellow>✔ <gray>Income Boost: </gray>%booster_income_percent%</yellow>'
+    - '<yellow>✔ <gray>Duration: </gray>%time%</yellow>'
+    - ' '
+    Personal:
+    - '[sound="minecraft:block.note_block.bell;0.8;1.0",prefix="false"]'
+    - ' '
+    - <yellow><b>Job Booster Received!</b></yellow>
+    - ' '
+    - <i><gray>Available <white>personally</white> for your <white>%job_name%</white> job.</gray></i>
+    - ' '
+    - '<yellow>✔ <gray>XP Boost: </gray>%booster_xp_percent%</yellow>'
+    - '<yellow>✔ <gray>Income Boost: </gray>%booster_income_percent%</yellow>'
+    - '<yellow>✔ <gray>Duration: </gray>%time%</yellow>'
+    - ' '
+  Expired:
+    Global: <gray>Global job booster has been expired.</gray>
+    Personal: <gray>Your <yellow>%job_name%</yellow> job booster has been expired.</gray>
+  List:
+    Info:
+    - '[prefix="false"]'
+    - ' '
+    - <yellow><b>%job_name% Job Boosters:</b></yellow>
+    - ' '
+    - '<i><gray>Legend: <white>XP</white> | <white>Income</white></gray></i>'
+    - ' '
+    - '%entry%'
+    - ' '
+    - <yellow><b>Total:</b></yellow> %xp_bonus%<gray> | </gray>%income_bonus%
+    - ' '
+    Entry: '<yellow>✔ <gray>%type% Booster: </gray>%xp_boost%<gray> | </gray>%income_boost% <gray>(<white>%time%</white>)</gray></yellow>'
+    Nothing: <red>You have no active boosters for this job.</red>
+Zone:
+  Info:
+    NotAvailable: '[type="action_bar"]<red>You can''t work in this zone currently!</red>'
+    NoPvP: '[type="action_bar"]<red>PvP is disabled in this zone!</red>'
+  Creation:
+    Success: '<gray>Successfully created job zone: <green>%zone_name%</green>!</gray>'
+    Info: <gray>Select two corners and use <green>/jobzone create</green> to create a new zone.</gray>
+  Selection:
+    Info: <gray>Selected <yellow>#%value%</yellow> zone position.</gray>
+  Error:
+    AlreadyExists: <gray>Zone with name <red>%name%</red> is already created!</gray>
+    NoSelection: '<gray>You must select zone corners first: <red>/jobzone wand</red></gray>'
+    IncompleteSelection: <gray>You must select 2 zone corners!</gray>
+Dialog:
+  Generic:
+    Button:
+      Back:
+        Label: <soft_yellow>←</soft_yellow> Back
+        Width: 150
+  JobStatus:
+    Title: <soft_yellow><b><u>Job Status</u></b></soft_yellow>
+    Body:
+      Contents:
+      - Select a new status for the <soft_yellow>%job_name%</soft_yellow> job.
+      - ''
+      - 'Current Status: <soft_yellow>%job_state%</soft_yellow>'
+      - ''
+      - <green>Primary</green> jobs give extra, but <green>smaller</green>, income and level rewards.
+      - ''
+      - <soft_blue>Secondary</soft_blue> jobs give the <soft_blue>highest</soft_blue> income and level rewards.
+      Width: 400
+    Button:
+      GetPrimary:
+        Label: <green>✔</green> Get as Primary
+        Width: 150
+      GetSecondary:
+        Label: <blue>✔</blue> Get as Secondary
+        Width: 150
+      Leave:
+        Label: <red>✘</red> Leave Job
+        Width: 150
+Error:
+  Command:
+    Argument:
+      InvalidZone: <gray><red>%value%</red> is not a valid zone!</gray>
+      InvalidJob: <gray><red>%value%</red> is not a valid job!</gray>
+      InvalidJobState: <gray><red>%value%</red> is not a valid job state!</gray>
+      InvalidAction: <gray><red>%value%</red> is not a valid action!</gray>
+  InvalidBooster: <red>Invalid booster!</red>
+  Error:
+    Command:
+      Argument:
+        InvalidCurrency: <gray><red>%value%</red> is not a valid currency!</gray>
+Other:
+  NoJobs: <gray><No Jobs></gray>
+  NoIncome: <gray>$0</gray>
+  JobDelimiter: ', '
+  CurrencyDelimiter: ', '
+  BonusPlus: <green>+%value%%</green>
+  BonusMinus: <red>%value%%</red>
+Editor:
+  Title:
+    Zone:
+      List: <black>Job Zones</black>
+      Settings: <black>Zone Settings</black>
+      BlockList: <black>Zone Block Lists</black>
+      BlockSettings: <black>Block List Settings</black>
+      ModifierList: <black>Zone Modifiers</black>
+      ModifierSettings: <black>Modifier Settings</black>
+      Hours: <black>Zone Hours</black>
+  Generic:
+    Enter:
+      Id: <gray>Enter <green>[Unique Identifier]</green></gray>
+      Name: <gray>Enter <green>[Display Name]</green></gray>
+      Number: <gray>Enter <green>[Number]</green></gray>
+      MinMax: <gray>Enter <green>[Min] [Max]</green></gray>
+      Times: <gray>Enter <green>[Hours] [12:00 17:00]</green></gray>
+      Currency: <gray>Enter <green>[Currency Identifier]</green></gray>
+      Material: <gray>Enter <green>[Material Name]</green></gray>
+  Zone:
+    Enter:
+      Description: <gray>Enter <green>[Description Line]</green></gray>
+      JobId: <gray>Enter <green>[Job Identifier]</green></gray>

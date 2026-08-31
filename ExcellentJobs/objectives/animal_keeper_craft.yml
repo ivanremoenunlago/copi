@@ -1,0 +1,4 @@
+Type: crafting
+Sources:
+  minecraft:carrot_on_a_stick: 'JobXP 4.0~6.0 ; Income 0.4~0.6 ; ContractPoints 0.08~0.12 ; Probability 100.0~100.0 ; '
+  minecraft:warped_fungus_on_a_stick: 'JobXP 8.0~12.0 ; Income 0.8~1.2 ; ContractPoints 0.16~0.24 ; Probability 100.0~100.0 ; '

@@ -1,0 +1,34 @@
+Definition:
+  Name: <white><sprite:"items":"item/lead"></white> <gradient:#f77062:#fe5196><b>ANIMAL KEEPER</b></gradient>
+  Description:
+  - <gray>Earn money by taking care</gray>
+  - <gray>of animals.</gray>
+  - <gray></gray>
+  - <gray>Get paid for breeding, taming,</gray>
+  - <gray>milking, and shearing them.</gray>
+  Icon:
+    Material: minecraft:lead
+    Lore: []
+  Menu-Slots: '22'
+  Menu-Page: 1
+Behavior:
+  Permission-Required: false
+  Join-Commands: []
+  Leave-Commands: []
+Grind:
+  Bar-Color: PINK
+  Objective-Ids:
+  - animal_keeper_milk
+  - animal_keeper_craft
+  - animal_keeper_breed
+  - animal_keeper_shear
+  - animal_keeper_tame
+Leveling:
+  Max-Level: 100
+  Reward-Pool-Ids:
+  - basic
+  Max_Level: 100
+Contract:
+  Required: true
+  Allowed-Ids:
+  - '*'

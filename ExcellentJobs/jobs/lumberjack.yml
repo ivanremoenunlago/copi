@@ -1,0 +1,35 @@
+Definition:
+  Name: <white><sprite:"items":"item/iron_axe"></white> <gradient:#f85032:#e73827><b>LUMBERJACK</b></gradient>
+  Description:
+  - <gray>Chop down trees and strip logs. </gray>
+  - <gray>to make money.</gray>
+  - <gray></gray>
+  - <gray>It is the perfect job for</gray>
+  - <gray>anyone who loves using</gray>
+  - <gray>an axe in the forest.</gray>
+  Icon:
+    Material: minecraft:iron_axe
+    Lore: []
+  Menu-Slots: '12'
+  Menu-Page: 1
+Behavior:
+  Permission-Required: false
+  Join-Commands: []
+  Leave-Commands: []
+Grind:
+  Bar-Color: RED
+  Objective-Ids:
+  - lumberjack_block_loot
+  - lumberjack_craft
+  - lumberjack_strip_block
+  - lumberjack_smith
+  - lumberjack_break_block
+Leveling:
+  Max-Level: 100
+  Reward-Pool-Ids:
+  - basic
+  Max_Level: 100
+Contract:
+  Required: true
+  Allowed-Ids:
+  - '*'

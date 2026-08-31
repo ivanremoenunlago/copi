@@ -1,0 +1,78 @@
+Settings:
+  MenuType: minecraft:generic_9x6
+  Title: Jobs
+  AutoRefresh:
+    Interval: 0
+  PlaceholderAPI:
+    Enabled: false
+Buttons:
+  gray_stained_glass_pane_05d2b:
+    Slots: 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
+    States:
+      default:
+        Icon:
+          Material: minecraft:gray_stained_glass_pane
+          Lore: []
+          Hide_Components: true
+          Hide_Tooltip: true
+  black_stained_glass_pane_ef664:
+    Slots: 45,46,47,48,49,50,51,52,53
+    States:
+      default:
+        Icon:
+          Material: minecraft:black_stained_glass_pane
+          Lore: []
+          Hide_Components: true
+          Hide_Tooltip: true
+  next_page:
+    Slots: '50'
+    States:
+      default:
+        Icon:
+          Material: minecraft:arrow
+          Display_Name: <white><b><u>Next Page</u> →</b></white>
+          Lore: []
+          Hide_Components: true
+        Actions:
+          Base: next_page
+        Condition: has_next_page
+  previous_page:
+    Slots: '48'
+    States:
+      default:
+        Icon:
+          Material: minecraft:arrow
+          Display_Name: <white><b>← <u>Previous Page</u></b></white>
+          Lore: []
+          Hide_Components: true
+        Actions:
+          Base: previous_page
+        Condition: has_previous_page
+Job:
+  Name: <white>%job_name%</white>
+  Lore:
+    Join:
+    - '%job_description%'
+    - '%empty-if-above%'
+    - <white><sprite:"items":"item/paper"></white> <c:#15A2E8><b>Statistics:</b></c>
+    - <dark_gray> » </dark_gray><gray>Employees:</gray> <c:#15A2E8>{employees}</c>
+    - <dark_gray> » </dark_gray><gray>You Top:</gray> <c:#15A2E8>Join to start compete!</c>
+    - ''
+    - <if_can_join><soft_yellow>→ <u>Click to select contract</u></soft_yellow></if_can_join>
+    - <if_can_not_join><soft_red>→ <u>You can't join this job</u></soft_red></if_can_not_join>
+    Manage:
+    - '%job_description%'
+    - '%empty-if-above%'
+    - <white><sprite:"items":"item/paper"></white> <c:#15A2E8><b>Statistics:</b></c>
+    - <dark_gray> » </dark_gray><gray>Employees:</gray> <c:#15A2E8>{employees}</c>
+    - <dark_gray> » </dark_gray><gray>You Top:</gray> <c:#15A2E8>#{top_level_position}</c>
+    - ''
+    - <white><sprite:"items":"item/experience_bottle"></white> <c:#A8E815><b>Leveling:</b></c>
+    - <dark_gray> » </dark_gray><gray>XP:</gray> <c:#A8E815>{xp}<gray>/</gray>{xp_required}</c>
+    - <dark_gray> » </dark_gray><gray>Level:</gray> <c:#A8E815>{level}<gray>/</gray>{max_level}</c>
+    - ''
+    - <white><sprite:"items":"item/book"></white> <c:#E8152E><b>Contract:</b></c>
+    - <dark_gray> » </dark_gray><gray>Current:</gray> <c:#E8152E>{contract_name}</c>
+    - <dark_gray> » </dark_gray><gray>Points:</gray> <c:#E8152E>{contract_points}</c>
+    - ''
+    - <gold>→ <u>Click to manage</u></gold>

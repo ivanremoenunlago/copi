@@ -1,0 +1,33 @@
+Definition:
+  Name: <white><sprite:"items":"item/fishing_rod"></white> <gradient:#2193b0:#6dd5ed><b>FISHERMAN</b></gradient>
+  Description:
+  - <gray>Catch fish with a rod or hunt</gray>
+  - <gray>them down in rivers and oceans.</gray>
+  - <gray></gray>
+  - <gray>Make a living by reeling in rare</gray>
+  - <gray>catches and looting fish mobs.</gray>
+  Icon:
+    Material: minecraft:fishing_rod
+    Lore: []
+  Menu-Slots: '13'
+  Menu-Page: 1
+Behavior:
+  Permission-Required: false
+  Join-Commands: []
+  Leave-Commands: []
+Grind:
+  Bar-Color: BLUE
+  Objective-Ids:
+  - fisherman_craft
+  - fisherman_mob_loot
+  - fisherman_fish_item
+  - fisherman_kill_mob
+Leveling:
+  Max-Level: 100
+  Reward-Pool-Ids:
+  - basic
+  Max_Level: 100
+Contract:
+  Required: true
+  Allowed-Ids:
+  - '*'

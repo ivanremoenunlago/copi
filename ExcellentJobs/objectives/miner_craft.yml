@@ -1,0 +1,7 @@
+Type: crafting
+Sources:
+  minecraft:wooden_pickaxe: 'JobXP 0.1~0.2 ; Income 0.01~0.02 ; ContractPoints 0.001~0.002 ; Probability 100.0~100.0 ; '
+  minecraft:stone_pickaxe: 'JobXP 0.2~0.4 ; Income 0.04~0.06 ; ContractPoints 0.005~0.01 ; Probability 100.0~100.0 ; '
+  minecraft:iron_pickaxe: 'JobXP 8.0~12.0 ; Income 1.6~2.4 ; ContractPoints 0.32~0.48 ; Probability 100.0~100.0 ; '
+  minecraft:golden_pickaxe: 'JobXP 4.0~6.0 ; Income 0.8~1.2 ; ContractPoints 0.16~0.24 ; Probability 100.0~100.0 ; '
+  minecraft:diamond_pickaxe: 'JobXP 40.0~60.0 ; Income 8.0~12.0 ; ContractPoints 1.6~2.4 ; Probability 100.0~100.0 ; '

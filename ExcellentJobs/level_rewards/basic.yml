@@ -1,0 +1,11 @@
+Priority: 0
+Levels:
+  65,35,100,5,70,40,10,75,45,15,80,50,20,85,55,25,90,60,30,95:
+    Name: $%amount%
+    Description: []
+    Commands:
+    - money give %player_name% %amount_raw%
+    Values:
+      amount:
+        Base: 500.0
+        Step: 50.0

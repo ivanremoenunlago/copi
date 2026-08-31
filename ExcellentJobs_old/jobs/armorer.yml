@@ -1,0 +1,201 @@
+# Sets display name for the job.
+# https://nightexpressdev.com/nightcore/configuration/text-formation/
+Name: '[lang].jobs.name.armorer[/lang] [lang].rank.clasp.c[/lang]'
+# Set description for the job.
+# https://nightexpressdev.com/nightcore/configuration/text-formation/
+Description:
+- '[lang].jobs.lore.armorer.1[/lang]'
+- '[lang].jobs.lore.armorer.2[/lang]'
+# Set icon for the job.
+# https://nightexpressdev.com/nightcore/configuration/item-formation/
+Icon:
+  Material: minecraft:blast_furnace
+  Lore: []
+# When enabled, players must have 'excellentjobs.job.armorer' permission in order to use this job.
+Permission_Required: true
+ProgressBar:
+  # Sets color for this job progress bar.
+  # Allowed values: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+  Color: GREEN
+# Assigns the job with specified state for new players joined for the first time.
+# https://nightexpressdev.com/excellentjobs/jobs/auto-join
+# [Allowed values: PRIMARY, SECONDARY, INACTIVE]
+# [Default is INACTIVE]
+Initial_State: INACTIVE
+# The job will have no effect in listed worlds (no XP and Income).
+# https://nightexpressdev.com/excellentjobs/jobs/disabled-worlds
+Disabled_Worlds: []
+General:
+  # https://nightexpressdev.com/excellentjobs/jobs/leave-join-commands
+  JoinCommands: []
+  # https://nightexpressdev.com/excellentjobs/jobs/leave-join-commands
+  LeaveCommands: []
+Leveling:
+  # Defines max. possible job level if picked as Primary job.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  Max_Level: 100
+  # Defines initial value for the geometric XP progression.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  XP_Initial: 400
+  # Defines step value for the geometric XP progression.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  XP_Factor: 1.0584421
+  # Leveling rewards.
+  # https://nightexpressdev.com/excellentjobs/jobs/level-rewards
+  Rewards:
+    List:
+      lvl_10:
+        Levels: '10'
+        Repeatable: false
+        Name: '[lang].jobs.armorer_c.rewards.10[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack armorer_c armorer_c_10
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_25:
+        Levels: '25'
+        Repeatable: false
+        Name: '[lang].jobs.armorer_c.rewards.25[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack armorer_c armorer_c_25
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_50:
+        Levels: '50'
+        Repeatable: false
+        Name: '[lang].jobs.armorer_c.rewards.50[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack armorer_c armorer_c_50
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_75:
+        Levels: '75'
+        Repeatable: false
+        Name: '[lang].jobs.armorer_c.rewards.75[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack armorer_c armorer_c_75
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_100:
+        Levels: '100'
+        Repeatable: false
+        Name: '[lang].jobs.armorer_c.rewards.100[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack armorer_c armorer_c_100
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+    Modifiers:
+      money:
+        Base: 0.0
+        Per_Level: 1000.0
+        Step: 1.0
+        Action: ADD
+
+
+Daily_Limits:
+  # Defines daily Income limits on per currency basis.
+  # You can use the 'default' keyword for all currencies that are not listed here.
+  # https://nightexpressdev.com/excellentjobs/jobs/daily-limits
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  Currency:
+    vault:
+      Base: -1.0
+      Per_Level: 0.0
+      Step: 0.0
+      Action: ADD
+  # Defines daily XP limit.
+  # https://nightexpressdev.com/excellentjobs/jobs/daily-limits
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  XP:
+    Base: -1.0
+    Per_Level: 0.0
+    Step: 0.0
+    Action: ADD
+Bonus:
+  # Sets XP bonus based on player's job state and level.
+  # https://nightexpressdev.com/excellentjobs/jobs/xp-income-bonus
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  XP:
+    Primary:
+      Base: 0.0
+      Per_Level: 0.0
+      Step: 5.0
+      Action: ADD
+    Secondary:
+      Base: 0.0
+      Per_Level: 0.0
+      Step: 1.0
+      Action: ADD
+  # Sets Income bonus based on player's job state and level.
+  # https://nightexpressdev.com/excellentjobs/jobs/xp-income-bonus
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  Income:
+    Primary:
+      Base: 0.0
+      Per_Level: 0.09
+      Step: 1.0
+      Action: ADD
+    Secondary:
+      Base: -0.5
+      Per_Level: 0.09
+      Step: 1.0
+      Action: ADD
+Objectives:
+  cooking:
+    Currency: vault
+    Type: cooking
+    SourceTable:
+      AutomatedSmeltBonus: 0.0 # XP and Income bonus (in %) for smelting/cooking automatically (using hoppers). Default is -80%.
+      ManualSmeltBonus: 50.0 # XP and Income bonus (in %) for smelting/cooking manually. Default is +50%.
+      Ingredients:
+        minecraft:raw_copper: 0.38;1.13 0.049;0.146 100.0
+        minecraft:raw_iron: 0.50;1.50 0.065;0.195 100.0
+        minecraft:raw_gold: 1.00;3.00 0.130;0.390 100.0
+        minecraft:ancient_debris: 3.00;9.00 0.390;1.170 100.0
+  forging:
+    Currency: vault
+    Type: forging
+    SourceTable:
+      Items:
+        default: 2.50;7.50 0.325;0.975 100.0
+  crafting:
+    Currency: vault
+    Type: crafting
+    SourceTable:
+      Items:
+        minecraft:iron_boots: 10.00;30.00 1.300;3.900 100.0
+        minecraft:iron_helmet: 12.50;37.50 1.625;4.875 100.0
+        minecraft:iron_leggings: 17.50;52.50 2.275;6.825 100.0
+        minecraft:iron_chestplate: 20.00;60.00 2.600;7.800 100.0
+        minecraft:golden_boots: 20.00;60.00 2.600;7.800 100.0
+        minecraft:golden_helmet: 25.00;75.00 3.250;9.750 100.0
+        minecraft:golden_leggings: 35.00;105.00 4.550;13.650 100.0
+        minecraft:golden_chestplate: 40.00;120.00 5.200;15.600 100.0
+        minecraft:shield: 3.13;9.38 0.406;1.219 100.0
+        minecraft:diamond_boots: 66.00;198.00 8.580;25.740 100.0
+        minecraft:diamond_helmet: 82.50;247.50 10.725;32.175 100.0
+        minecraft:diamond_leggings: 115.50;346.50 15.015;45.045 100.0
+        minecraft:diamond_chestplate: 132.00;396.00 17.160;51.480 100.0
+        minecraft:netherite_ingot: 74.00;222.00 9.620;28.860 100.0
+# Controls which states (priorities) are allowed for this job.
+# https://nightexpressdev.com/excellentjobs/jobs/priority-limits
+# [Allowed values: PRIMARY, SECONDARY, INACTIVE]
+Allowed_States:
+- PRIMARY
+- INACTIVE
+- SECONDARY

@@ -1,0 +1,197 @@
+# ==================== [SECTION] SETTINGS ====================
+# > [MenuType] : String | Represents the menu type. Allowed values: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/inventory/MenuType.html
+# > [Title] : String | Sets menu title.
+# > [Auto_Refresh] : Integer | Defines menu refresh rate in seconds. Set 0 to disable.
+# > [PlaceholderAPI -> Enabled] : Boolean | When enabled, applies PlaceholderAPI placeholders for all items in the menu per player.
+#  
+# ==================== [SECTION] CONTENT ====================
+# You can freely edit items in this section as you wish (add, remove, modify items).
+# > [Item] : Section | Item to display.
+#     [*] Navigate to https://nightexpressdev.com/nightcore/configuration/item-formation/ for a list of available options.
+# > [Priority] : Integer | Item priority. Higher values will override other item(s) in the same slot(s).
+# > [Slots] : Int Array | Item slots, starts from 0. Split with commas.
+#     Slots: '0,4,9,10'
+# > [Type] : String | Defines item click action.
+#     [*] Available types: ['close', 'user_skin', 'page_next', 'page_previous', 'primary_decoration', 'secondary_decoration', 'inactive_decoration', 'return', 'stats', 'status_primary', 'status_secondary', 'status_inactive']
+# > [Click_Commands] : Section | Executes commands on click with PlaceholderAPI support.
+#     [*] Works only if [Type] is not set (null).
+#     [*] Available click types: [LEFT, RIGHT, SHIFT_LEFT, SHIFT_RIGHT, DROP_KEY, SWAP_KEY, DRAG_N_DROP]
+#     [*] Use prefix 'player:' to run command by a player.
+#     Click_Commands:
+#       LEFT:
+#       - say Hello
+#       - give %player_name% diamond 1
+#       - player: warp shop
+# ==================================================
+Settings:
+  MenuType: minecraft:generic_9x6
+  Title: <black>[%job_name%] Progression</black>
+  Auto_Refresh: -1
+  PlaceholderAPI:
+    Enabled: false
+Reward:
+  Locked:
+    Material: minecraft:red_concrete
+    Display_Name: <red><b>Level %level%</b></red><gray> • </gray><white>Locked</white>
+    Lore:
+    - ''
+    - <red><b>Reward:</b></red>
+    - '%rewards%'
+  Unclaimed:
+    Material: minecraft:orange_concrete
+    Display_Name: <soft_orange><b>Level %level%</b></soft_orange><gray> • </gray><red>Unclaimed</red>
+    Lore:
+    - ''
+    - <soft_orange><b>Reward:</b></soft_orange>
+    - '%rewards%'
+    - ''
+    - <soft_orange>→ <u>Click to claim!</u></soft_orange>
+    Enchant_Glint: true
+  Claimed:
+    Material: minecraft:lime_concrete
+    Display_Name: <green><b>Level %level%</b></green><gray> • </gray><white>Unlocked</white>
+    Lore:
+    - ''
+    - <green><b>Reward:</b></green>
+    - '%rewards%'
+  Upcoming:
+    Material: minecraft:yellow_concrete
+    Display_Name: <yellow><b>Level %level%</b></yellow><gray> • </gray><white>In Progress</white>
+    Lore:
+    - ''
+    - <yellow><b>Reward:</b></yellow>
+    - '%rewards%'
+  Format:
+  - <gray>• %reward_name%</gray>
+  Slots: 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
+Content:
+  gray_stained_glass_pane:
+    Priority: -1
+    Item:
+      Material: minecraft:gray_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44
+    Type: 'null'
+  black_stained_glass_pane:
+    Priority: -1
+    Item:
+      Material: minecraft:black_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 0,1,2,3,4,5,6,7,8,45,46,47,48,49,50,51,52,53
+    Type: 'null'
+  primary_decoration:
+    Priority: 1
+    Item:
+      Material: minecraft:lime_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 1,2,3,5,6,7,46,47,48,50,51,52
+    Type: primary_decoration
+  secondary_decoration:
+    Priority: 1
+    Item:
+      Material: minecraft:light_blue_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 1,2,3,5,6,7,46,47,48,50,51,52
+    Type: secondary_decoration
+  inactive_decoration:
+    Priority: 1
+    Item:
+      Material: minecraft:red_stained_glass_pane
+      Lore: []
+      Hide_Tooltip: true
+    Slots: 1,2,3,5,6,7,46,47,48,50,51,52
+    Type: inactive_decoration
+  page_next:
+    Priority: 10
+    Item:
+      Material: minecraft:arrow
+      Display_Name: <white><b><u>Next Page</u> →</b></white>
+      Lore: []
+    Slots: '53'
+    Type: page_next
+  page_previous:
+    Priority: 10
+    Item:
+      Material: minecraft:arrow
+      Display_Name: <white><b>← <u>Previous Page</u></b></white>
+      Lore: []
+    Slots: '45'
+    Type: page_previous
+  return:
+    Priority: 10
+    Item:
+      Material: minecraft:iron_door
+      Display_Name: <soft_yellow><b>Back</b></soft_yellow>
+      Lore: []
+    Slots: '49'
+    Type: return
+  levels__rewards:
+    Priority: 10
+    Item:
+      Material: minecraft:gold_ingot
+      Display_Name: <gradient:#FFE033:#FFF385><b>Levels & Rewards</b></gradient>
+      Lore:
+      - <dark_gray>(You're here)</dark_gray>
+      - ''
+      - <gray>Discover the levels allowing you</gray>
+      - <gray>to obtain <yellow>unique rewards</yellow>.</gray>
+      Enchant_Glint: true
+    Slots: '0'
+    Type: 'null'
+  stats:
+    Priority: 10
+    Item:
+      Material: minecraft:writable_book
+      Display_Name: <gold><b>Stats</b></gold>
+      Lore:
+      - <gray>Your personal job stats.</gray>
+      - ''
+      - <gold>→ <u>Click to open</u></gold>
+    Slots: '8'
+    Type: stats
+  stats_locked:
+    Priority: 9
+    Item:
+      Material: minecraft:barrier
+      Display_Name: <red><b>Stats</b></red> <gray>(Locked)</gray>
+      Lore:
+      - <gray>Get the job to unlock stats!</gray>
+    Slots: '8'
+    Type: 'null'
+  status_primary:
+    Priority: 10
+    Item:
+      Material: minecraft:lime_dye
+      Display_Name: <soft_green><b>Status:</b></soft_green> <white>%job_state%</white>
+      Lore:
+      - <gray>Your job status.</gray>
+      - ' '
+      - <soft_green>→ <u>Click to change</u></soft_green>
+    Slots: '4'
+    Type: status_primary
+  status_secondary:
+    Priority: 10
+    Item:
+      Material: minecraft:light_blue_dye
+      Display_Name: <soft_blue><b>Status:</b></soft_blue> <white>%job_state%</white>
+      Lore:
+      - <gray>Your job status.</gray>
+      - ' '
+      - <soft_blue>→ <u>Click to change</u></soft_blue>
+    Slots: '4'
+    Type: status_secondary
+  status_inactive:
+    Priority: 10
+    Item:
+      Material: minecraft:gray_dye
+      Display_Name: <red><b>Status:</b></red> <white>%job_state%</white>
+      Lore:
+      - <gray>Your job status.</gray>
+      - ' '
+      - <red>→ <u>Click to change</u></red>
+    Slots: '4'
+    Type: status_inactive

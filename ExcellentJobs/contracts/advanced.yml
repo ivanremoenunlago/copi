@@ -1,0 +1,88 @@
+Definition:
+  Name: <yellow><b>Advanced</b></yellow>
+  Description:
+  - <gray>An advanced contract for those</gray>
+  - <gray>who have mastered the basic one.</gray>
+  - <gray></gray>
+  - <gray>Additional working hours for earning and</gray>
+  - <gray>increased objective bonuses.</gray>
+  - <gray></gray>
+  - <gray><white><sprite:"items":"item/map"></white> <gold><b>Terms & Conditions:</b></gold></gray>
+  - '<gray><dark_gray> » </dark_gray>Promotion Required: <white>Basic</white></gray>'
+  - '<gray><dark_gray> » </dark_gray>Activation Cost: <white>$5,000</white></gray>'
+  - '<gray><dark_gray> » </dark_gray> Usage Limits: <white>0 - 3</white></gray>'
+  - <gray></gray>
+  - <gray><white><sprite:"items":"item/clock_12"></white> <yellow><b>Working Hours:</b></yellow></gray>
+  - '<gray><dark_gray> » </dark_gray>Mon-Fri: <white>8 AM</white> - <white>10 PM</white></gray>'
+  - '<gray><dark_gray> » </dark_gray>Sat-Sun: <white>12 PM</white> - <white>12 AM</white></gray>'
+  - <gray></gray>
+  - <gray>Work done outside of working hours <gold>is paid at 20%</gold></gray>
+  - <gray></gray>
+  - <gray><white><sprite:"items":"item/arrow"></white> <green><b>Objective Bonuses:</b></green></gray>
+  - '<gray><dark_gray> » </dark_gray>XP: <green>15%</green> + <green>1%</green> per job level</gray>'
+  - '<gray><dark_gray> » </dark_gray>Earnings: <green>15%</green> + <green>1%</green> per job level</gray>'
+  - '<gray><dark_gray> » </dark_gray>Contract Points: <green>+10%</green></gray>'
+  - <gray></gray>
+  - <gray><white><sprite:"items":"item/experience_bottle"></white> <blue><b>Promotion:</b></blue></gray>
+  - <gray>Earn <blue>4,000 Contract Points</blue></gray>
+  - <gray>within <white>21 days</white> to receive a promotion</gray>
+  - <gray>and additional rewards.</gray>
+  - <gray></gray>
+  - <gray>In case of failure, a promotion retry</gray>
+  - <gray>will be available in no less than <soft_red>5 days</soft_red>.</gray>
+  Icon:
+    Material: minecraft:gold_ingot
+    Lore: []
+  Priority: 1
+Unlocking:
+  Permission-Required: true
+  Cost:
+    Enabled: true
+    Currencies:
+      vault: 5000.0
+  Conditions:
+    Enabled: true
+    List:
+      active_contracts:
+        advanced: 0-3
+Behavior:
+  Leave-Cooldown: 3d
+  Timeframe:
+    Days:
+      WEDNESDAY: 08:00-22:00
+      THURSDAY: 08:00-22:00
+      TUESDAY: 08:00-22:00
+      MONDAY: 08:00-22:00
+      FRIDAY: 08:00-22:00
+      SATURDAY: 12:00-00:00
+      SUNDAY: 12:00-00:00
+  Objective-Property-Modifiers:
+    CONTRACT_POINTS:
+      Base: 1.1
+      JobLevelBonus: 0.0
+      TimeframePenalty: 0.8
+    PROBABILITY:
+      Base: 1.0
+      JobLevelBonus: 0.0
+      TimeframePenalty: 0.8
+    XP:
+      Base: 1.15
+      JobLevelBonus: 0.01
+      TimeframePenalty: 0.8
+    INCOME:
+      Base: 1.15
+      JobLevelBonus: 0.01
+      TimeframePenalty: 0.8
+Promotion:
+  Enabled: true
+  Duration:
+    Enabled: true
+    Value: 3w
+  Cooldown:
+    Enabled: true
+    Value: 5d
+  Goal:
+    Contract-Points: 4000
+  Reward-Commands:
+  - money give %player_name% 30000
+  Reward-Messages: []

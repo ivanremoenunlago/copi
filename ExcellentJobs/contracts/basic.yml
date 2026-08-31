@@ -1,0 +1,76 @@
+Definition:
+  Name: <white><b>Basic</b></white>
+  Description:
+  - <gray>The most basic contract with no special privileges.</gray>
+  - <gray>Available to everyone.</gray>
+  - <gray></gray>
+  - <gray><white><sprite:"items":"item/clock_12"></white> <yellow><b>Working Hours:</b></yellow></gray>
+  - '<gray><dark_gray> » </dark_gray>Mon-Fri: <white>10 AM</white> - <white>10 PM</white></gray>'
+  - '<gray><dark_gray> » </dark_gray>Sat-Sun: <white>12 PM</white> - <white>8 PM</white></gray>'
+  - <gray></gray>
+  - <gray>Work done outside of working hours <soft_red><b>IS NOT PAID</b></soft_red>!</gray>
+  - <gray></gray>
+  - <gray><white><sprite:"items":"item/arrow"></white> <green><b>Objective Bonuses:</b></green></gray>
+  - '<gray><dark_gray> » </dark_gray>XP: <green>+1%</green> per job level</gray>'
+  - '<gray><dark_gray> » </dark_gray>Earnings: <green>+1%</green> per job level</gray>'
+  - <gray></gray>
+  - <gray><white><sprite:"items":"item/experience_bottle"></white> <blue><b>Promotion:</b></blue></gray>
+  - <gray>Earn <blue>2,500 Contract Points</blue></gray>
+  - <gray>within <white>14 days</white> to receive a promotion</gray>
+  - <gray>and additional rewards.</gray>
+  - <gray></gray>
+  - <gray>In case of failure, a promotion retry</gray>
+  - <gray>will be available in no less than <soft_red>3 days</soft_red>.</gray>
+  Icon:
+    Material: minecraft:coal
+    Lore: []
+  Priority: 0
+Unlocking:
+  Permission-Required: false
+  Cost:
+    Enabled: false
+  Conditions:
+    Enabled: false
+Behavior:
+  Leave-Cooldown: 3d
+  Timeframe:
+    Days:
+      WEDNESDAY: 10:00-22:00
+      THURSDAY: 10:00-22:00
+      TUESDAY: 10:00-22:00
+      MONDAY: 10:00-22:00
+      FRIDAY: 10:00-22:00
+      SATURDAY: 12:00-20:00
+      SUNDAY: 12:00-20:00
+  Objective-Property-Modifiers:
+    CONTRACT_POINTS:
+      Base: 1.0
+      JobLevelBonus: 0.0
+      TimeframePenalty: 1.0
+    PROBABILITY:
+      Base: 1.0
+      JobLevelBonus: 0.0
+      TimeframePenalty: 1.0
+    XP:
+      Base: 1.0
+      JobLevelBonus: 0.01
+      TimeframePenalty: 1.0
+    INCOME:
+      Base: 1.0
+      JobLevelBonus: 0.01
+      TimeframePenalty: 1.0
+Promotion:
+  Enabled: true
+  Duration:
+    Enabled: true
+    Value: 2w
+  Cooldown:
+    Enabled: true
+    Value: 3d
+  Goal:
+    Contract-Points: 2500
+  Reward-Commands:
+  - money give %player_name% 15000
+  - lp user %player_name% permission set excellentjobs.contracts.contract.advanced.%job_id% true
+  Reward-Messages:
+  - <gray>You have unlocked <green>Advanced</green> contract for your <white>%job_name%</white> job!</gray>

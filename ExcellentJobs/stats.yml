@@ -1,0 +1,7 @@
+Data:
+  Table-Name: job_stats
+  Cache-Duration: 3600
+  Save-Interval: 5
+Stats:
+  Top-Trackers:
+    Update-Interval: 900

@@ -1,0 +1,32 @@
+Definition:
+  Name: <white><sprite:"items":"item/bread"></white> <gradient:#ffeaa7:#fdcb6e><b>BAKER</b></gradient>
+  Description:
+  - <gray>Make money by cooking and eating</gray>
+  - <gray>different kinds of food.</gray>
+  - <gray></gray>
+  - <gray>Turn your love for baking into a</gray>
+  - <gray>tasty way to get rich.</gray>
+  Icon:
+    Material: minecraft:bread
+    Lore: []
+  Menu-Slots: '15'
+  Menu-Page: 1
+Behavior:
+  Permission-Required: false
+  Join-Commands: []
+  Leave-Commands: []
+Grind:
+  Bar-Color: GREEN
+  Objective-Ids:
+  - baker_craft
+  - baker_smelt
+  - baker_eat
+Leveling:
+  Max-Level: 100
+  Reward-Pool-Ids:
+  - basic
+  Max_Level: 100
+Contract:
+  Required: true
+  Allowed-Ids:
+  - '*'

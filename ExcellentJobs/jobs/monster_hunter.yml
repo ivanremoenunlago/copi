@@ -1,0 +1,33 @@
+Definition:
+  Name: <white><sprite:"items":"item/iron_sword"></white> <gradient:#ffecd2:#fcb69f><b>MONSTER HUNTER</b></gradient>
+  Description:
+  - <gray>Fight the monsters that come</gray>
+  - <gray>out at night and in caves.</gray>
+  - <gray></gray>
+  - <gray>Get paid for every hostile mob you</gray>
+  - <gray>defeat to keep the world safe.</gray>
+  Icon:
+    Material: minecraft:iron_sword
+    Lore: []
+  Menu-Slots: '23'
+  Menu-Page: 1
+Behavior:
+  Permission-Required: false
+  Join-Commands: []
+  Leave-Commands: []
+Grind:
+  Bar-Color: WHITE
+  Objective-Ids:
+  - monster_hunter_craft
+  - monster_hunter_break_block
+  - monster_hunter_kill_mob
+  - monster_hunter_smith
+Leveling:
+  Max-Level: 100
+  Reward-Pool-Ids:
+  - basic
+  Max_Level: 100
+Contract:
+  Required: true
+  Allowed-Ids:
+  - '*'

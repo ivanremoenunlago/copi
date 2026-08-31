@@ -1,0 +1,263 @@
+# Sets display name for the job.
+# https://nightexpressdev.com/nightcore/configuration/text-formation/
+Name: '[lang].jobs.name.master_blacksmith[/lang] [lang].rank.clasp.a[/lang]'
+# Set description for the job.
+# https://nightexpressdev.com/nightcore/configuration/text-formation/
+Description:
+- '[lang].jobs.lore.master_blacksmith.1[/lang]'
+- '[lang].jobs.lore.master_blacksmith.2[/lang]'
+- '[lang].jobs.lore.master_blacksmith.3[/lang]'
+# Set icon for the job.
+# https://nightexpressdev.com/nightcore/configuration/item-formation/
+Icon:
+  Material: minecraft:anvil
+  Lore: []
+# When enabled, players must have 'excellentjobs.job.master_blacksmith' permission in order to use this job.
+Permission_Required: true
+ProgressBar:
+  # Sets color for this job progress bar.
+  # Allowed values: PINK, BLUE, RED, GREEN, YELLOW, PURPLE, WHITE
+  Color: GREEN
+# Assigns the job with specified state for new players joined for the first time.
+# https://nightexpressdev.com/excellentjobs/jobs/auto-join
+# [Allowed values: PRIMARY, SECONDARY, INACTIVE]
+# [Default is INACTIVE]
+Initial_State: INACTIVE
+# The job will have no effect in listed worlds (no XP and Income).
+# https://nightexpressdev.com/excellentjobs/jobs/disabled-worlds
+Disabled_Worlds: []
+General:
+  # https://nightexpressdev.com/excellentjobs/jobs/leave-join-commands
+  JoinCommands: []
+  # https://nightexpressdev.com/excellentjobs/jobs/leave-join-commands
+  LeaveCommands: []
+Leveling:
+  # Defines max. possible job level if picked as Primary job.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  Max_Level: 100
+  # Defines initial value for the geometric XP progression.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  XP_Initial: 600
+  # Defines step value for the geometric XP progression.
+  # https://nightexpressdev.com/excellentjobs/jobs/leveling
+  XP_Factor: 1.0584421
+  # Leveling rewards.
+  # https://nightexpressdev.com/excellentjobs/jobs/level-rewards
+  Rewards:
+    List:
+      lvl_20:
+        Levels: '20'
+        Repeatable: false
+        Name: '[lang].jobs.master_blacksmith.rewards.20[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_20
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_30:
+        Levels: '30'
+        Repeatable: false
+        Name: '[lang].jobs.master_blacksmith.rewards.30[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_30
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_40:
+        Levels: '40'
+        Repeatable: false
+        Name: '[lang].jobs.master_blacksmith.rewards.40[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_40
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_50:
+        Levels: '50'
+        Repeatable: false
+        Name: '[lang].jobs.master_blacksmith.rewards.50[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_50
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_60:
+        Levels: '60'
+        Repeatable: false
+        Name: '[lang].jobs.master_blacksmith.rewards.60[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_60
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_70:
+        Levels: '70'
+        Repeatable: false
+        Name: '[lang].jobs.master_blacksmith.rewards.70[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_70
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_80:
+        Levels: '80'
+        Repeatable: false
+        Name: '[lang].jobs.master_blacksmith.rewards.80[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_80
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_90:
+        Levels: '90'
+        Repeatable: false
+        Name: '[lang].jobs.master_blacksmith.rewards.90[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_90
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+      lvl_100:
+        Levels: '100'
+        Repeatable: false
+        Name: '[lang].jobs.master_blacksmith.rewards.100[/lang]'
+        Description: []
+        Commands:
+        - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_100
+        Required_Permission: 'null'
+        Required_Ranks: []
+        RequirementInfo: []
+        Required_States: []
+    Modifiers:
+      money:
+        Base: 0.0
+        Per_Level: 1000.0
+        Step: 1.0
+        Action: ADD
+
+Daily_Limits:
+  # Defines daily Income limits on per currency basis.
+  # You can use the 'default' keyword for all currencies that are not listed here.
+  # https://nightexpressdev.com/excellentjobs/jobs/daily-limits
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  Currency:
+    vault:
+      Base: -1.0
+      Per_Level: 0.0
+      Step: 0.0
+      Action: ADD
+  # Defines daily XP limit.
+  # https://nightexpressdev.com/excellentjobs/jobs/daily-limits
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  XP:
+    Base: -1.0
+    Per_Level: 0.0
+    Step: 0.0
+    Action: ADD
+Bonus:
+  # Sets XP bonus based on player's job state and level.
+  # https://nightexpressdev.com/excellentjobs/jobs/xp-income-bonus
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  XP:
+    Primary:
+      Base: 0.0
+      Per_Level: 0.0
+      Step: 5.0
+      Action: ADD
+    Secondary:
+      Base: 0.0
+      Per_Level: 0.0
+      Step: 1.0
+      Action: ADD
+  # Sets Income bonus based on player's job state and level.
+  # https://nightexpressdev.com/excellentjobs/jobs/xp-income-bonus
+  # https://nightexpressdev.com/excellentjobs/modifiers
+  Income:
+    Primary:
+      Base: 0.0
+      Per_Level: 0.09
+      Step: 1.0
+      Action: ADD
+    Secondary:
+      Base: -0.5
+      Per_Level: 0.09
+      Step: 1.0
+      Action: ADD
+Objectives:
+  crafting:
+    Currency: vault
+    Type: crafting
+    SourceTable:
+      Items:
+        minecraft:iron_shovel: 2.65;7.95 0.398;1.193 100.0
+        minecraft:iron_hoe: 5.15;15.45 0.773;2.318 100.0
+        minecraft:golden_shovel: 5.15;15.45 0.773;2.318 100.0
+        minecraft:iron_axe: 7.65;22.95 1.148;3.443 100.0
+        minecraft:iron_pickaxe: 7.65;22.95 1.148;3.443 100.0
+        minecraft:iron_boots: 10.00;30.00 1.500;4.500 100.0
+        minecraft:golden_sword: 10.08;30.23 1.511;4.534 100.0
+        minecraft:golden_hoe: 10.15;30.45 1.523;4.568 100.0
+        minecraft:compass: 10.50;31.50 1.575;4.725 100.0
+        minecraft:iron_helmet: 12.50;37.50 1.875;5.625 100.0
+        minecraft:golden_axe: 15.15;45.45 2.273;6.818 100.0
+        minecraft:golden_pickaxe: 15.15;45.45 2.273;6.818 100.0
+        minecraft:diamond_shovel: 16.65;49.95 2.498;7.493 100.0
+        minecraft:diamond_pickaxe: 16.65;49.95 2.498;7.493 100.0
+        minecraft:iron_leggings: 17.50;52.50 2.625;7.875 100.0
+        minecraft:iron_chestplate: 20.00;60.00 3.000;9.000 100.0
+        minecraft:golden_boots: 20.00;60.00 3.000;9.000 100.0
+        minecraft:clock: 20.50;61.50 3.075;9.225 100.0
+        minecraft:golden_helmet: 25.00;75.00 3.750;11.250 100.0
+        minecraft:diamond_sword: 33.08;99.23 4.961;14.884 100.0
+        minecraft:diamond_hoe: 33.15;99.45 4.973;14.918 100.0
+        minecraft:golden_leggings: 35.00;105.00 5.250;15.750 100.0
+        minecraft:golden_chestplate: 40.00;120.00 6.000;18.000 100.0
+        minecraft:diamond_axe: 49.65;148.95 7.448;22.343 100.0
+        minecraft:diamond_boots: 66.00;198.00 9.900;29.700 100.0
+        minecraft:netherite_ingot: 74.00;222.00 11.100;33.300 100.0
+        minecraft:diamond_helmet: 82.50;247.50 12.375;37.125 100.0
+        minecraft:diamond_leggings: 115.50;346.50 17.325;51.975 100.0
+        minecraft:diamond_chestplate: 132.00;396.00 19.800;59.400 100.0
+        minecraft:mace: 126.50;379.50 18.975;56.925 100.0
+  
+  cooking:
+    Currency: vault
+    Type: cooking
+    SourceTable:
+      AutomatedSmeltBonus: 0.0 # XP and Income bonus (in %) for smelting/cooking automatically (using hoppers). Default is -80%.
+      ManualSmeltBonus: 50.0 # XP and Income bonus (in %) for smelting/cooking manually. Default is +50%.
+      Ingredients:
+        minecraft:raw_copper: 0.38;1.13 0.056;0.169 100.0
+        minecraft:raw_iron: 0.50;1.50 0.075;0.225 100.0
+        minecraft:raw_gold: 1.00;3.00 0.150;0.450 100.0
+        minecraft:ancient_debris: 3.00;9.00 0.450;1.350 100.0
+  
+  forging:
+    Currency: vault
+    Type: forging
+    SourceTable:
+      Items:
+        default: 2.50;7.50 0.375;1.125 100.0
+# Controls which states (priorities) are allowed for this job.
+# https://nightexpressdev.com/excellentjobs/jobs/priority-limits
+# [Allowed values: PRIMARY, SECONDARY, INACTIVE]
+Allowed_States:
+- PRIMARY
+- INACTIVE
+- SECONDARY

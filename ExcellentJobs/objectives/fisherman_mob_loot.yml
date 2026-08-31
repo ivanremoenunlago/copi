@@ -1,0 +1,8 @@
+Type: mob_loot
+Sources:
+  minecraft:cod: 'JobXP 1.6~2.4000000000000004 ; Income 0.16~0.24 ; ContractPoints 0.04~0.06 ; Probability 100.0~100.0 ; '
+  minecraft:salmon: 'JobXP 1.6~2.4000000000000004 ; Income 0.16~0.24 ; ContractPoints 0.04~0.06 ; Probability 100.0~100.0 ; '
+  minecraft:tropical_fish: 'JobXP 3.2~4.800000000000001 ; Income 0.32~0.48 ; ContractPoints 0.08~0.12 ; Probability 100.0~100.0 ; '
+  minecraft:pufferfish: 'JobXP 3.2~4.800000000000001 ; Income 0.32~0.48 ; ContractPoints 0.08~0.12 ; Probability 100.0~100.0 ; '
+  minecraft:cooked_cod: 'JobXP 3.2~4.800000000000001 ; Income 0.32~0.48 ; ContractPoints 0.08~0.12 ; Probability 100.0~100.0 ; '
+  minecraft:cooked_salmon: 'JobXP 3.2~4.800000000000001 ; Income 0.32~0.48 ; ContractPoints 0.08~0.12 ; Probability 100.0~100.0 ; '

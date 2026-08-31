@@ -1,0 +1,6 @@
+Type: crafting
+Sources:
+  minecraft:wooden_hoe: 'JobXP 0.1~0.2 ; Income 0.01~0.02 ; ContractPoints 0.001~0.002 ; Probability 100.0~100.0 ; '
+  minecraft:stone_hoe: 'JobXP 0.2~0.4 ; Income 0.04~0.06 ; ContractPoints 0.005~0.01 ; Probability 100.0~100.0 ; '
+  minecraft:iron_hoe: 'JobXP 5.0~7.0 ; Income 1.0~1.4 ; ContractPoints 0.2~0.3 ; Probability 100.0~100.0 ; '
+  minecraft:diamond_hoe: 'JobXP 25.0~35.0 ; Income 5.0~7.0 ; ContractPoints 1.0~1.4 ; Probability 100.0~100.0 ; '
