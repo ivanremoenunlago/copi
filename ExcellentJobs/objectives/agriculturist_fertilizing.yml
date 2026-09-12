@@ -1,0 +1,10 @@
+Type: fertilizing
+Sources:
+  minecraft:potatoes: 'JobXP 0.08~0.23 ; Income 0.008~0.023 ; ContractPoints 0.008~0.023 ; Probability 100.0~100.0 ; '
+  minecraft:carrots: 'JobXP 0.08~0.23 ; Income 0.008~0.023 ; ContractPoints 0.008~0.023 ; Probability 100.0~100.0 ; '
+  minecraft:wheat: 'JobXP 0.08~0.23 ; Income 0.008~0.023 ; ContractPoints 0.008~0.023 ; Probability 100.0~100.0 ; '
+  minecraft:beetroots: 'JobXP 0.08~0.23 ; Income 0.008~0.023 ; ContractPoints 0.008~0.023 ; Probability 100.0~100.0 ; '
+  minecraft:melon_stem: 'JobXP 0.15~0.45 ; Income 0.015~0.045 ; ContractPoints 0.015~0.045 ; Probability 100.0~100.0 ; '
+  minecraft:pumpkin_stem: 'JobXP 0.15~0.45 ; Income 0.015~0.045 ; ContractPoints 0.015~0.045 ; Probability 100.0~100.0 ; '
+  minecraft:sweet_berry_bush: 'JobXP 0.08~0.23 ; Income 0.008~0.023 ; ContractPoints 0.008~0.023 ; Probability 100.0~100.0 ; '
+  minecraft:glow_lichen: 'JobXP 0.08~0.23 ; Income 0.008~0.023 ; ContractPoints 0.008~0.023 ; Probability 100.0~100.0 ; '

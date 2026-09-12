@@ -1,0 +1,31 @@
+Definition:
+  Name: <white><sprite:"items":"item/anvil"></white> <gradient:#1a1a1a:#2a2a2a><b>MASTER BLACKSMITH</b></gradient>
+  Description:
+  - <gray>Ultimate master of metallurgy and crafting.</gray>
+  - <gray>Forge legendary equipment and tools.</gray>
+  - <gray></gray>
+  - <gray>Highest tier blacksmith job with</gray>
+  - <gray>elite crafting and smelting expertise.</gray>
+  Icon:
+    Material: minecraft:anvil
+    Lore: []
+  Menu-Slots: '23'
+  Menu-Page: 1
+Behavior:
+  Permission-Required: true
+  Join-Commands: []
+  Leave-Commands: []
+Grind:
+  Bar-Color: GREEN
+  Objective-Ids:
+  - master_blacksmith_crafting
+  - master_blacksmith_cooking
+Leveling:
+  Max-Level: 100
+  Reward-Pool-Ids:
+  - basic
+  Max_Level: 100
+Contract:
+  Required: true
+  Allowed-Ids:
+  - '*'

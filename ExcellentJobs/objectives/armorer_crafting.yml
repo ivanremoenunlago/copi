@@ -1,0 +1,16 @@
+Type: crafting
+Sources:
+  minecraft:iron_boots: 'JobXP 10.00~30.00 ; Income 1.300~3.900 ; ContractPoints 1.300~3.900 ; Probability 100.0~100.0 ; '
+  minecraft:iron_helmet: 'JobXP 12.50~37.50 ; Income 1.625~4.875 ; ContractPoints 1.625~4.875 ; Probability 100.0~100.0 ; '
+  minecraft:iron_leggings: 'JobXP 17.50~52.50 ; Income 2.275~6.825 ; ContractPoints 2.275~6.825 ; Probability 100.0~100.0 ; '
+  minecraft:iron_chestplate: 'JobXP 20.00~60.00 ; Income 2.600~7.800 ; ContractPoints 2.600~7.800 ; Probability 100.0~100.0 ; '
+  minecraft:golden_boots: 'JobXP 20.00~60.00 ; Income 2.600~7.800 ; ContractPoints 2.600~7.800 ; Probability 100.0~100.0 ; '
+  minecraft:golden_helmet: 'JobXP 25.00~75.00 ; Income 3.250~9.750 ; ContractPoints 3.250~9.750 ; Probability 100.0~100.0 ; '
+  minecraft:golden_leggings: 'JobXP 35.00~105.00 ; Income 4.550~13.650 ; ContractPoints 4.550~13.650 ; Probability 100.0~100.0 ; '
+  minecraft:golden_chestplate: 'JobXP 40.00~120.00 ; Income 5.200~15.600 ; ContractPoints 5.200~15.600 ; Probability 100.0~100.0 ; '
+  minecraft:shield: 'JobXP 3.13~9.38 ; Income 0.406~1.219 ; ContractPoints 0.406~1.219 ; Probability 100.0~100.0 ; '
+  minecraft:diamond_boots: 'JobXP 66.00~198.00 ; Income 8.580~25.740 ; ContractPoints 8.580~25.740 ; Probability 100.0~100.0 ; '
+  minecraft:diamond_helmet: 'JobXP 82.50~247.50 ; Income 10.725~32.175 ; ContractPoints 10.725~32.175 ; Probability 100.0~100.0 ; '
+  minecraft:diamond_leggings: 'JobXP 115.50~346.50 ; Income 15.015~45.045 ; ContractPoints 15.015~45.045 ; Probability 100.0~100.0 ; '
+  minecraft:diamond_chestplate: 'JobXP 132.00~396.00 ; Income 17.160~51.480 ; ContractPoints 17.160~51.480 ; Probability 100.0~100.0 ; '
+  minecraft:netherite_ingot: 'JobXP 74.00~222.00 ; Income 9.620~28.860 ; ContractPoints 9.620~28.860 ; Probability 100.0~100.0 ; '

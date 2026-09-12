@@ -1,0 +1,14 @@
+Type: crafting
+Sources:
+  minecraft:iron_sword: 'JobXP 7.65~22.95 ; Income 0.995~2.984 ; ContractPoints 0.995~2.984 ; Probability 100.0~100.0 ; '
+  minecraft:iron_axe: 'JobXP 7.65~22.95 ; Income 0.995~2.984 ; ContractPoints 0.995~2.984 ; Probability 100.0~100.0 ; '
+  minecraft:golden_sword: 'JobXP 15.15~45.45 ; Income 1.970~5.909 ; ContractPoints 1.970~5.909 ; Probability 100.0~100.0 ; '
+  minecraft:golden_axe: 'JobXP 15.15~45.45 ; Income 1.970~5.909 ; ContractPoints 1.970~5.909 ; Probability 100.0~100.0 ; '
+  minecraft:diamond_sword: 'JobXP 49.65~148.95 ; Income 6.455~19.364 ; ContractPoints 6.455~19.364 ; Probability 100.0~100.0 ; '
+  minecraft:diamond_axe: 'JobXP 49.65~148.95 ; Income 6.455~19.364 ; ContractPoints 6.455~19.364 ; Probability 100.0~100.0 ; '
+  minecraft:netherite_sword: 'JobXP 80.00~240.00 ; Income 10.400~31.200 ; ContractPoints 10.400~31.200 ; Probability 100.0~100.0 ; '
+  minecraft:netherite_axe: 'JobXP 80.00~240.00 ; Income 10.400~31.200 ; ContractPoints 10.400~31.200 ; Probability 100.0~100.0 ; '
+  minecraft:trident: 'JobXP 20.00~60.00 ; Income 2.600~7.800 ; ContractPoints 2.600~7.800 ; Probability 100.0~100.0 ; '
+  minecraft:bow: 'JobXP 7.50~22.50 ; Income 0.975~2.925 ; ContractPoints 0.975~2.925 ; Probability 100.0~100.0 ; '
+  minecraft:crossbow: 'JobXP 15.00~45.00 ; Income 1.950~5.850 ; ContractPoints 1.950~5.850 ; Probability 100.0~100.0 ; '
+  minecraft:shield: 'JobXP 3.13~9.38 ; Income 0.406~1.219 ; ContractPoints 0.406~1.219 ; Probability 100.0~100.0 ; '

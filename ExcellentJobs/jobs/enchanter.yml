@@ -1,24 +1,25 @@
 Definition:
-  Name: <white><sprite:"items":"item/lapis_lazuli"></white> <gradient:#b224ef:#7579ff><b>ENCHANTER</b></gradient>
+  Name: <white><sprite:"items":"item/enchanting_table"></white> <gradient:#8b45f8:#6b34c8><b>ENCHANTER</b></gradient>
   Description:
-  - <gray>Use magic to put powerful</gray>
-  - <gray>enchantments on tools, weapons,</gray>
-  - <gray>and armor.</gray>
+  - <gray>Enchant tools and weapons</gray>
+  - <gray>to imbue them with magic.</gray>
   - <gray></gray>
-  - <gray>Turn basic gear into valuable items.</gray>
+  - <gray>Master mystical enhancements</gray>
+  - <gray>and restore damaged equipment.</gray>
   Icon:
     Material: minecraft:enchanting_table
     Lore: []
-  Menu-Slots: '30'
+  Menu-Slots: '22'
   Menu-Page: 1
 Behavior:
-  Permission-Required: false
+  Permission-Required: true
   Join-Commands: []
   Leave-Commands: []
 Grind:
-  Bar-Color: PURPLE
+  Bar-Color: GREEN
   Objective-Ids:
-  - enchanter_enchant
+  - enchanter_enchanting
+  - enchanter_grindstone
 Leveling:
   Max-Level: 100
   Reward-Pool-Ids:

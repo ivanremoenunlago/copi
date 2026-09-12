@@ -1,13 +1,13 @@
 Progression:
-  Type: linear
+  Type: geometric
   # Controls whether all leveling progress will be lost when player quits the job.
   Reset-On-Leave: false
   Settings:
-    linear:
-      Base: 150.0
-      Step: 100.0
+    geometric:
+      Base: 300.0
+      Multiplier: 1.0584421
 Rewards:
-  Claim-Required: true
+  Claim-Required: false
 GrindBar:
   Element:
     Enabled: true
