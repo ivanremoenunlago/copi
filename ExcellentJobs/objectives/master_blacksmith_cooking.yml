@@ -1,6 +1,6 @@
 Type: cooking
 Sources:
-  minecraft:raw_copper: 'JobXP 0.38~1.13 ; Income 0.056~0.169 ; ContractPoints 0.056~0.169 ; Probability 100.0~100.0 ; '
-  minecraft:raw_iron: 'JobXP 0.50~1.50 ; Income 0.075~0.225 ; ContractPoints 0.075~0.225 ; Probability 100.0~100.0 ; '
-  minecraft:raw_gold: 'JobXP 1.00~3.00 ; Income 0.150~0.450 ; ContractPoints 0.150~0.450 ; Probability 100.0~100.0 ; '
-  minecraft:ancient_debris: 'JobXP 3.00~9.00 ; Income 0.450~1.350 ; ContractPoints 0.450~1.350 ; Probability 100.0~100.0 ; '
+  minecraft:raw_copper: 'JobXP 0.063~0.188 ; Income 0.056~0.169 ; ContractPoints 0.056~0.169 ; Probability 100.0~100.0 ; '
+  minecraft:raw_iron: 'JobXP 0.083~0.250 ; Income 0.075~0.225 ; ContractPoints 0.075~0.225 ; Probability 100.0~100.0 ; '
+  minecraft:raw_gold: 'JobXP 0.167~0.500 ; Income 0.150~0.450 ; ContractPoints 0.150~0.450 ; Probability 100.0~100.0 ; '
+  minecraft:ancient_debris: 'JobXP 0.500~1.500 ; Income 0.450~1.350 ; ContractPoints 0.450~1.350 ; Probability 100.0~100.0 ; '

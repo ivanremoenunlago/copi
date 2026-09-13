@@ -1,0 +1,11 @@
+Type: gathering
+Sources:
+  minecraft:wheat: 'JobXP 0.03~0.09 ; Income 0.003~0.009 ; ContractPoints 0.003~0.009 ; Probability 100.0~100.0 ; '
+  minecraft:potato: 'JobXP 0.03~0.09 ; Income 0.003~0.009 ; ContractPoints 0.003~0.009 ; Probability 100.0~100.0 ; '
+  minecraft:carrot: 'JobXP 0.02~0.05 ; Income 0.002~0.005 ; ContractPoints 0.002~0.005 ; Probability 100.0~100.0 ; '
+  minecraft:beetroot: 'JobXP 0.02~0.05 ; Income 0.002~0.005 ; ContractPoints 0.002~0.005 ; Probability 100.0~100.0 ; '
+  minecraft:seeds: 'JobXP 0.09~0.27 ; Income 0.009~0.027 ; ContractPoints 0.009~0.027 ; Probability 100.0~100.0 ; '
+  minecraft:beetroot_seeds: 'JobXP 0.02~0.05 ; Income 0.002~0.005 ; ContractPoints 0.002~0.005 ; Probability 100.0~100.0 ; '
+  minecraft:melon_slice: 'JobXP 0.02~0.05 ; Income 0.002~0.005 ; ContractPoints 0.002~0.005 ; Probability 100.0~100.0 ; '
+  minecraft:glow_berries: 'JobXP 0.50~1.50 ; Income 0.050~0.150 ; ContractPoints 0.050~0.150 ; Probability 100.0~100.0 ; '
+  minecraft:sweet_berries: 'JobXP 0.17~0.50 ; Income 0.017~0.050 ; ContractPoints 0.017~0.050 ; Probability 100.0~100.0 ; '

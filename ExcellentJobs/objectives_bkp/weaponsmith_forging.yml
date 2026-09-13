@@ -1,0 +1,6 @@
+Type: forging
+Sources:
+  minecraft:iron_ingot: 'JobXP 2.50~7.50 ; Income 0.325~0.975 ; ContractPoints 0.325~0.975 ; Probability 100.0~100.0 ; '
+  minecraft:gold_ingot: 'JobXP 2.50~7.50 ; Income 0.325~0.975 ; ContractPoints 0.325~0.975 ; Probability 100.0~100.0 ; '
+  minecraft:diamond: 'JobXP 2.50~7.50 ; Income 0.325~0.975 ; ContractPoints 0.325~0.975 ; Probability 100.0~100.0 ; '
+  minecraft:netherite_ingot: 'JobXP 2.50~7.50 ; Income 0.325~0.975 ; ContractPoints 0.325~0.975 ; Probability 100.0~100.0 ; '

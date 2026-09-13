@@ -82,6 +82,17 @@ Los jobs que quedaron preservados en la nueva estructura son:
 
 Cada job tiene su definición en [ExcellentJobs/jobs](ExcellentJobs/jobs), y sus objetivos asociados en [ExcellentJobs/objectives](ExcellentJobs/objectives).
 
+Los objetivos originales se conservan sin modificar en [ExcellentJobs/objectives_bkp](ExcellentJobs/objectives_bkp). La XP de los objetivos activos se escala por rango para que un job de rango superior necesite proporcionalmente más trabajo para subir:
+
+- F: 100% de XP.
+- E: 50% de XP.
+- D: 33,33% de XP.
+- C: 25% de XP.
+- B: 20% de XP.
+- A: 16,67% de XP.
+
+Como todos los jobs usan la misma progresión global, estas reducciones de XP hacen que E requiera aproximadamente el doble de actividad que F, D el triple, y así sucesivamente. Solo se modifica `JobXP`; los ingresos, puntos de contrato, probabilidades y materiales permanecen iguales.
+
 ## Jobs con permiso requerido
 Siguiendo la lógica de la configuración vieja, los jobs abiertos solo para todos son:
 
