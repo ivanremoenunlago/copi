@@ -1,4 +1,4 @@
-Priority: 0
+Priority: 2
 Levels:
   10,20,30,40,50,60,70,80,90,100:
     Name: $%amount%
@@ -7,5 +7,5 @@ Levels:
     - money give %player_name% %amount_raw%
     Values:
       amount:
-        Base: 10.0
+        Base: 1250.0
         Step: 0.0

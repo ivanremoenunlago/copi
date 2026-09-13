@@ -1,0 +1,47 @@
+Priority: 10
+Levels:
+  '20':
+    Name: '[lang].jobs.master_blacksmith.rewards.20[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_20
+  '30':
+    Name: '[lang].jobs.master_blacksmith.rewards.30[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_30
+  '40':
+    Name: '[lang].jobs.master_blacksmith.rewards.40[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_40
+  '50':
+    Name: '[lang].jobs.master_blacksmith.rewards.50[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_50
+  '60':
+    Name: '[lang].jobs.master_blacksmith.rewards.60[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_60
+  '70':
+    Name: '[lang].jobs.master_blacksmith.rewards.70[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_70
+  '80':
+    Name: '[lang].jobs.master_blacksmith.rewards.80[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_80
+  '90':
+    Name: '[lang].jobs.master_blacksmith.rewards.90[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_90
+  '100':
+    Name: '[lang].jobs.master_blacksmith.rewards.100[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack master_blacksmith_a master_blacksmith_a_100

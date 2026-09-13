@@ -1,11 +1,8 @@
 Definition:
-  Name: <white><sprite:"items":"item/iron_pickaxe"></white> <gradient:#d6d6d6:#7d7d7d><b>TOOLSMITH</b></gradient>
+  Name: <white><sprite:"items":"item/iron_pickaxe"></white> [lang].jobs.name.toolsmith[/lang] [lang].rank.clasp.c[/lang]
   Description:
-  - <gray>Craft tools and utility gear</gray>
-  - <gray>to improve mining and survival.</gray>
-  - <gray></gray>
-  - <gray>Focused on practical combat and</gray>
-  - <gray>resource efficiency.</gray>
+  - '[lang].jobs.lore.toolsmith.1[/lang]'
+  - '[lang].jobs.lore.toolsmith.2[/lang]'
   Icon:
     Material: minecraft:smithing_table
     Lore: []
@@ -24,7 +21,8 @@ Grind:
 Leveling:
   Max-Level: 100
   Reward-Pool-Ids:
-  - basic
+  - money_c
+  - toolsmith_rewards
   Max_Level: 100
 Contract:
   Required: true

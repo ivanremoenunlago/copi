@@ -1,0 +1,22 @@
+Priority: 10
+Levels:
+  '25':
+    Name: '[lang].jobs.lumberjack_e.rewards.25[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack lumberjack_e lumberjack_e_25
+  '50':
+    Name: '[lang].jobs.lumberjack_e.rewards.50[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack lumberjack_e lumberjack_e_50
+  '75':
+    Name: '[lang].jobs.lumberjack_e.rewards.75[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack lumberjack_e lumberjack_e_75
+  '100':
+    Name: '[lang].jobs.lumberjack_e.rewards.100[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack lumberjack_e lumberjack_e_100

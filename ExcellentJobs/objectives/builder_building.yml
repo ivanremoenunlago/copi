@@ -1,4 +1,4 @@
-Type: placing
+Type: building
 Sources:
   minecraft:white_carpet: 'JobXP 0.25~0.75 ; Income 0.03~0.03 ; ContractPoints 0.03~0.03 ; Probability 100.0~100.0 ; '
   minecraft:orange_carpet: 'JobXP 0.25~0.75 ; Income 0.03~0.03 ; ContractPoints 0.03~0.03 ; Probability 100.0~100.0 ; '

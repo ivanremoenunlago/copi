@@ -1,11 +1,8 @@
 Definition:
-  Name: <white><sprite:"items":"item/bricks"></white> <gradient:#90ee90:#228b22><b>BUILDER</b></gradient>
+  Name: <white><sprite:"items":"item/bricks"></white> [lang].jobs.name.builder[/lang] [lang].rank.clasp.d[/lang]
   Description:
-  - <gray>Place and build with blocks to</gray>
-  - <gray>shape the world and create structures.</gray>
-  - <gray></gray>
-  - <gray>Earn rewards for architectural</gray>
-  - <gray>achievements and creative construction.</gray>
+  - '[lang].jobs.lore.builder.1[/lang]'
+  - '[lang].jobs.lore.builder.2[/lang]'
   Icon:
     Material: minecraft:beacon
     Lore: []
@@ -18,11 +15,12 @@ Behavior:
 Grind:
   Bar-Color: GREEN
   Objective-Ids:
-  - builder_placing
+  - builder_building
 Leveling:
   Max-Level: 100
   Reward-Pool-Ids:
-  - basic
+  - money_d
+  - builder_rewards
   Max_Level: 100
 Contract:
   Required: true

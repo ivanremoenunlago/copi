@@ -1,11 +1,8 @@
 Definition:
-  Name: <white><sprite:"items":"item/iron_hoe"></white> <gradient:#96bf48:#5e8e3e><b>AGRICULTURIST</b></gradient>
+  Name: <white><sprite:"items":"item/iron_hoe"></white> [lang].jobs.name.agriculturist[/lang] [lang].rank.clasp.f[/lang]
   Description:
-  - <gray>Grow crops, harvest fields,</gray>
-  - <gray>and turn farming into stable income.</gray>
-  - <gray></gray>
-  - <gray>Perfect for players who work the land</gray>
-  - <gray>and manage the farm economy.</gray>
+  - '[lang].jobs.lore.agriculturist.1[/lang]'
+  - '[lang].jobs.lore.agriculturist.2[/lang]'
   Icon:
     Material: minecraft:iron_hoe
     Lore: []
@@ -25,7 +22,8 @@ Grind:
 Leveling:
   Max-Level: 100
   Reward-Pool-Ids:
-  - basic
+  - money_f
+  - agriculturist_rewards
   Max_Level: 100
 Contract:
   Required: true

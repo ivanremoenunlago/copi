@@ -1,11 +1,8 @@
 Definition:
-  Name: <white><sprite:"items":"item/enchanting_table"></white> <gradient:#8b45f8:#6b34c8><b>ENCHANTER</b></gradient>
+  Name: <white><sprite:"items":"item/enchanting_table"></white> [lang].jobs.name.enchanter[/lang] [lang].rank.clasp.b[/lang]
   Description:
-  - <gray>Enchant tools and weapons</gray>
-  - <gray>to imbue them with magic.</gray>
-  - <gray></gray>
-  - <gray>Master mystical enhancements</gray>
-  - <gray>and restore damaged equipment.</gray>
+  - '[lang].jobs.lore.enchanter.1[/lang]'
+  - '[lang].jobs.lore.enchanter.2[/lang]'
   Icon:
     Material: minecraft:enchanting_table
     Lore: []
@@ -23,7 +20,8 @@ Grind:
 Leveling:
   Max-Level: 100
   Reward-Pool-Ids:
-  - basic
+  - money_b
+  - enchanter_rewards
   Max_Level: 100
 Contract:
   Required: true

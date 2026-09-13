@@ -1,11 +1,9 @@
 Definition:
-  Name: <white><sprite:"items":"item/anvil"></white> <gradient:#1a1a1a:#2a2a2a><b>MASTER BLACKSMITH</b></gradient>
+  Name: <white><sprite:"items":"item/anvil"></white> [lang].jobs.name.master_blacksmith[/lang] [lang].rank.clasp.a[/lang]
   Description:
-  - <gray>Ultimate master of metallurgy and crafting.</gray>
-  - <gray>Forge legendary equipment and tools.</gray>
-  - <gray></gray>
-  - <gray>Highest tier blacksmith job with</gray>
-  - <gray>elite crafting and smelting expertise.</gray>
+  - '[lang].jobs.lore.master_blacksmith.1[/lang]'
+  - '[lang].jobs.lore.master_blacksmith.2[/lang]'
+  - '[lang].jobs.lore.master_blacksmith.3[/lang]'
   Icon:
     Material: minecraft:anvil
     Lore: []
@@ -23,7 +21,8 @@ Grind:
 Leveling:
   Max-Level: 100
   Reward-Pool-Ids:
-  - basic
+  - money_a
+  - master_blacksmith_rewards
   Max_Level: 100
 Contract:
   Required: true

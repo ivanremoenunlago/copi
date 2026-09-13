@@ -41,12 +41,14 @@ Los rewards se gestionan desde la carpeta [ExcellentJobs/level_rewards](Excellen
 
 Los pools creados para la progresión por niveles son:
 
-- f.yml -> 10 por nivel
-- e.yml -> 100 por nivel
-- d.yml -> 1000 por nivel
-- c.yml -> 10000 por nivel
-- b.yml -> 100000 por nivel
-- a.yml -> 1000000 por nivel
+- money_f.yml -> 50 por nivel
+- money_e.yml -> 250 por nivel
+- money_d.yml -> 1250 por nivel
+- money_c.yml -> 10000 por nivel
+- money_b.yml -> 75000 por nivel
+- money_a.yml -> 500000 por nivel
+
+Cada job utiliza el pool económico de su rango y un pool específico (`*_rewards`) para entregar sus permisos mediante comandos `settrack`.
 
 Estos han sido ajustados para activarse cada 10 niveles:
 
@@ -109,6 +111,7 @@ Los objetivos se han migrado a la arquitectura moderna del plugin, separando cad
 - agriculturist_fertilizing.yml
 - agriculturist_gathering.yml
 - agriculturist_mining.yml
+- builder_building.yml
 - armorer_cooking.yml
 - armorer_forging.yml
 - armorer_crafting.yml

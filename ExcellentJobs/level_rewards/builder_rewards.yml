@@ -1,0 +1,22 @@
+Priority: 10
+Levels:
+  '25':
+    Name: '[lang].jobs.builder_d.rewards.25[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack builder_d builder_d_25
+  '50':
+    Name: '[lang].jobs.builder_d.rewards.50[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack builder_d builder_d_50
+  '75':
+    Name: '[lang].jobs.builder_d.rewards.75[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack builder_d builder_d_75
+  '100':
+    Name: '[lang].jobs.builder_d.rewards.100[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack builder_d builder_d_100

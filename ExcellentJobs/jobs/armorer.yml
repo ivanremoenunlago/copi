@@ -1,11 +1,8 @@
 Definition:
-  Name: <white><sprite:"items":"item/iron_chestplate"></white> <gradient:#d0d0d0:#8e8e8e><b>ARMORER</b></gradient>
+  Name: <white><sprite:"items":"item/iron_chestplate"></white> [lang].jobs.name.armorer[/lang] [lang].rank.clasp.c[/lang]
   Description:
-  - <gray>Forge armor pieces and craft</gray>
-  - <gray>defensive equipment from raw metals.</gray>
-  - <gray></gray>
-  - <gray>Perfect for strong protection and</gray>
-  - <gray>high-value crafting turns.</gray>
+  - '[lang].jobs.lore.armorer.1[/lang]'
+  - '[lang].jobs.lore.armorer.2[/lang]'
   Icon:
     Material: minecraft:blast_furnace
     Lore: []
@@ -24,7 +21,8 @@ Grind:
 Leveling:
   Max-Level: 100
   Reward-Pool-Ids:
-  - basic
+  - money_c
+  - armorer_rewards
   Max_Level: 100
 Contract:
   Required: true

@@ -1,11 +1,8 @@
 Definition:
-  Name: <white><sprite:"items":"item/iron_axe"></white> <gradient:#8b4513:#654321><b>LUMBERJACK</b></gradient>
+  Name: <white><sprite:"items":"item/iron_axe"></white> [lang].jobs.name.lumberjack[/lang] [lang].rank.clasp.e[/lang]
   Description:
-  - <gray>Chop trees and harvest wood</gray>
-  - <gray>from forests and plantations.</gray>
-  - <gray></gray>
-  - <gray>Expert in forestry and</gray>
-  - <gray>sustainable timber harvesting.</gray>
+  - '[lang].jobs.lore.lumberjack.1[/lang]'
+  - '[lang].jobs.lore.lumberjack.2[/lang]'
   Icon:
     Material: minecraft:iron_axe
     Lore: []
@@ -23,7 +20,8 @@ Grind:
 Leveling:
   Max-Level: 100
   Reward-Pool-Ids:
-  - basic
+  - money_e
+  - lumberjack_rewards
   Max_Level: 100
 Contract:
   Required: true

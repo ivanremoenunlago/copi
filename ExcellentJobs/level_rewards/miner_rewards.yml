@@ -1,0 +1,37 @@
+Priority: 10
+Levels:
+  '10':
+    Name: '[lang].jobs.miner_f.rewards.10[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack miner_f miner_f_10
+  '25':
+    Name: '[lang].jobs.miner_f.rewards.25[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack miner_f miner_f_25
+  '40':
+    Name: '[lang].jobs.miner_f.rewards.40[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack miner_f miner_f_40
+  '50':
+    Name: '[lang].jobs.miner_f.rewards.50[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack miner_f miner_f_50
+  '75':
+    Name: '[lang].jobs.miner_f.rewards.75[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack miner_f miner_f_75
+  '85':
+    Name: '[lang].jobs.miner_f.rewards.85[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack miner_f miner_f_85
+  '100':
+    Name: '[lang].jobs.miner_f.rewards.100[/lang]'
+    Description: []
+    Commands:
+    - lp user %player_name% parent settrack miner_f miner_f_100

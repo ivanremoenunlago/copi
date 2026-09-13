@@ -1,11 +1,8 @@
 Definition:
-  Name: <white><sprite:"items":"item/iron_sword"></white> <gradient:#c9c9c9:#757575><b>WEAPONSMITH</b></gradient>
+  Name: <white><sprite:"items":"item/iron_sword"></white> [lang].jobs.name.weaponsmith[/lang] [lang].rank.clasp.c[/lang]
   Description:
-  - <gray>Create weapons for combat and boss fights.</gray>
-  - <gray>Turn metal into offensive power.</gray>
-  - <gray></gray>
-  - <gray>High reward job for players who</gray>
-  - <gray>specialize in damage output.</gray>
+  - '[lang].jobs.lore.weaponsmith.1[/lang]'
+  - '[lang].jobs.lore.weaponsmith.2[/lang]'
   Icon:
     Material: minecraft:grindstone
     Lore: []
@@ -24,7 +21,8 @@ Grind:
 Leveling:
   Max-Level: 100
   Reward-Pool-Ids:
-  - basic
+  - money_c
+  - weaponsmith_rewards
   Max_Level: 100
 Contract:
   Required: true

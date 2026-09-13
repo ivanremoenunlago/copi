@@ -1,11 +1,8 @@
 Definition:
-  Name: <white><sprite:"items":"item/stone_pickaxe"></white> <gradient:#c8c8c8:#808080><b>MINER</b></gradient>
+  Name: <white><sprite:"items":"item/stone_pickaxe"></white> [lang].jobs.name.miner[/lang] [lang].rank.clasp.f[/lang]
   Description:
-  - <gray>Mine ores and precious minerals</gray>
-  - <gray>from deep underground.</gray>
-  - <gray></gray>
-  - <gray>Master all valuable stone types</gray>
-  - <gray>and ancient treasures.</gray>
+  - '[lang].jobs.lore.miner.1[/lang]'
+  - '[lang].jobs.lore.miner.2[/lang]'
   Icon:
     Material: minecraft:stone_pickaxe
     Lore: []
@@ -23,7 +20,8 @@ Grind:
 Leveling:
   Max-Level: 100
   Reward-Pool-Ids:
-  - basic
+  - money_f
+  - miner_rewards
   Max_Level: 100
 Contract:
   Required: true

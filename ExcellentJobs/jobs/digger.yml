@@ -1,11 +1,8 @@
 Definition:
-  Name: <white><sprite:"items":"item/stone_shovel"></white> <gradient:#90ee90:#228b22><b>DIGGER</b></gradient>
+  Name: <white><sprite:"items":"item/stone_shovel"></white> [lang].jobs.name.digger[/lang] [lang].rank.clasp.f[/lang]
   Description:
-  - <gray>Dig and excavate soft blocks</gray>
-  - <gray>to discover valuable resources.</gray>
-  - <gray></gray>
-  - <gray>Specialized in earth, sand,</gray>
-  - <gray>and loose terrain materials.</gray>
+  - '[lang].jobs.lore.digger.1[/lang]'
+  - '[lang].jobs.lore.digger.2[/lang]'
   Icon:
     Material: minecraft:stone_shovel
     Lore: []
@@ -22,7 +19,8 @@ Grind:
 Leveling:
   Max-Level: 100
   Reward-Pool-Ids:
-  - basic
+  - money_f
+  - digger_rewards
   Max_Level: 100
 Contract:
   Required: true
