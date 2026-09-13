@@ -6,7 +6,7 @@ Definition:
   Icon:
     Material: minecraft:blast_furnace
     Lore: []
-  Menu-Slots: '13'
+  Menu-Slots: '22'
   Menu-Page: 1
 Behavior:
   Permission-Required: true

@@ -6,7 +6,7 @@ Definition:
   Icon:
     Material: minecraft:beacon
     Lore: []
-  Menu-Slots: '18'
+  Menu-Slots: '21'
   Menu-Page: 1
 Behavior:
   Permission-Required: true
