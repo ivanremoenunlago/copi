@@ -50,9 +50,14 @@ Los pools creados para la progresión por niveles son:
 
 Cada job utiliza el pool económico de su rango y un pool específico (`*_rewards`) para entregar sus permisos mediante comandos `settrack`.
 
-Estos han sido ajustados para activarse cada 10 niveles:
+Los pagos se distribuyen en los 100 niveles para evitar perder toda la recompensa económica cuando un nivel está reservado para un permiso:
 
-- 10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+- Niveles 1-25: la mitad de la cuota normal.
+- Niveles 26-75: la cuota normal.
+- Niveles 76-100: una cuota y media, compensando la reducción inicial.
+- Excepción del rango F: niveles 1-10 pagan 10 por nivel y niveles 11-100 pagan 5.
+
+Si un nivel coincide con un reward de permisos, el permiso tiene prioridad y se entrega ese reward.
 
 Y en la configuración global también queda la entrega automática:
 
