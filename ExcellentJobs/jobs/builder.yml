@@ -1,5 +1,5 @@
 Definition:
-  Name: <white><sprite:"items":"item/bricks"></white> [lang].jobs.name.builder[/lang] [lang].rank.clasp.d[/lang]
+  Name: <white><sprite:"items":"item/brick"></white> [lang].jobs.name.builder[/lang] [lang].rank.clasp.d[/lang]
   Description:
   - '[lang].jobs.lore.builder.1[/lang]'
   - '[lang].jobs.lore.builder.2[/lang]'

@@ -1,5 +1,5 @@
 Definition:
-  Name: <white><sprite:"items":"item/anvil"></white> [lang].jobs.name.master_blacksmith[/lang] [lang].rank.clasp.a[/lang]
+  Name: <white><sprite:"items":"item/netherite_upgrade_smithing_template"></white> [lang].jobs.name.master_blacksmith[/lang] [lang].rank.clasp.a[/lang]
   Description:
   - '[lang].jobs.lore.master_blacksmith.1[/lang]'
   - '[lang].jobs.lore.master_blacksmith.2[/lang]'

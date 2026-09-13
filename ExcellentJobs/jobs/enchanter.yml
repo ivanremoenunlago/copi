@@ -1,5 +1,5 @@
 Definition:
-  Name: <white><sprite:"items":"item/enchanting_table"></white> [lang].jobs.name.enchanter[/lang] [lang].rank.clasp.b[/lang]
+  Name: <white><sprite:"items":"item/enchanted_book"></white> [lang].jobs.name.enchanter[/lang] [lang].rank.clasp.b[/lang]
   Description:
   - '[lang].jobs.lore.enchanter.1[/lang]'
   - '[lang].jobs.lore.enchanter.2[/lang]'
